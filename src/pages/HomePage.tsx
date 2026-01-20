@@ -1,15 +1,20 @@
+import { useState } from 'react';
 import { Music2, Heart, PartyPopper, Star, CheckCircle, Clock, Award, ArrowRight, Play, Quote, X } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import FAQAccordion from '../components/FAQAccordion';
 import ContactSection from '../components/ContactSection';
 import GallerySection from '../components/GallerySection';
+import MultiStepForm from '../components/MultiStepForm';
+import WhatsAppButton from '../components/WhatsAppButton';
+import CookieBanner from '../components/CookieBanner';
 
 interface HomePageProps {
   onNavigate: (page: 'home' | 'wedding' | 'party') => void;
 }
 
 const HomePage = ({ onNavigate }: HomePageProps) => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const homeFaqs = [
     {
       question: "Wie früh sollte ich dich buchen?",
@@ -87,13 +92,13 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <a
-                  href="#contact"
+                <button
+                  onClick={() => setIsFormOpen(true)}
                   className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-cyan-600 text-white rounded-xl text-lg font-semibold hover:bg-cyan-700 transition-all shadow-lg shadow-cyan-600/20"
                 >
                   Jetzt Anfrage senden
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
                 <button
                   onClick={() => document.getElementById('meine-geschichte')?.scrollIntoView({ behavior: 'smooth' })}
                   className="group inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-cyan-600 text-gray-800 rounded-xl text-lg font-medium hover:bg-white/50 transition-all"
@@ -307,13 +312,13 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 </div>
               </div>
 
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
               >
                 Unverbindlich anfragen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -377,13 +382,13 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 <span className="font-medium text-cyan-400">Termine 2026 verfügbar</span>
               </div>
 
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group inline-flex items-center justify-center gap-3 px-10 py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl text-xl font-semibold transition-all shadow-2xl hover:shadow-cyan-500/30"
               >
                 Jetzt kurz schreiben und Mix erhalten
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -625,13 +630,13 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
             </div>
 
             <div className="mt-16 text-center">
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/30 transition-all"
               >
                 Jetzt Schritt 1 starten
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -690,19 +695,23 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
               Schreib mir jetzt und sichere dir deinen Wunschtermin.
               Beliebte Daten sind schnell vergeben.
             </p>
-            <a
-              href="#contact"
+            <button
+              onClick={() => setIsFormOpen(true)}
               className="group inline-flex items-center gap-3 px-10 py-6 bg-white text-gray-900 rounded-2xl text-xl font-semibold hover:bg-gray-100 transition-all shadow-2xl shadow-black/20"
             >
               Jetzt anfragen
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </div>
         </section>
 
         <ContactSection type="home" variant="light" />
 
         <Footer type="home" onNavigate={onNavigate} variant="light" />
+
+        <MultiStepForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} initialEventType="general" />
+        <WhatsAppButton />
+        <CookieBanner />
       </div>
     </div>
   );

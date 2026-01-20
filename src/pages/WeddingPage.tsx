@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { Heart, Music, Mic, Sparkles, CheckCircle, Calendar, Clock, Users, Mail, Phone, Gift, Star, ArrowRight, Play } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import TestimonialSlider from '../components/TestimonialSlider';
 import FAQAccordion from '../components/FAQAccordion';
 import ContactSection from '../components/ContactSection';
+import MultiStepForm from '../components/MultiStepForm';
+import WhatsAppButton from '../components/WhatsAppButton';
+import CookieBanner from '../components/CookieBanner';
 
 interface WeddingPageProps {
   onNavigate: (page: 'home' | 'wedding' | 'party') => void;
@@ -14,6 +18,7 @@ const accentColorLight = '#d4b8cf';
 const accentColorDark = '#a07a99';
 
 const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const weddingTestimonials = [
     {
       text: "Die Musikauswahl war perfekt auf unsere Gäste zugeschnitten und die Tanzfläche war immer voll. Wir hätten uns keinen besseren DJ wünschen können!",
@@ -131,8 +136,8 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-medium transition-all shadow-2xl hover:shadow-xl"
                 style={{ backgroundColor: accentColor }}
                 onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
@@ -140,7 +145,7 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
               >
                 Jetzt Anfrage senden
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
               <button
                 onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-white/50 text-white rounded-xl text-xl font-medium hover:bg-white/10 transition-all"
@@ -312,8 +317,8 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
                 <span className="font-medium" style={{ color: accentColorLight }}>Termine 2026 verfügbar</span>
               </div>
 
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-semibold transition-all shadow-2xl"
                 style={{ backgroundColor: accentColor }}
                 onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
@@ -321,7 +326,7 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
               >
                 Jetzt kurz schreiben und Mix erhalten
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -422,9 +427,9 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className="block w-full py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-center font-medium transition-colors border border-gray-300">
+                <button onClick={() => setIsFormOpen(true)} className="block w-full py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-center font-medium transition-colors border border-gray-300">
                   Angebot anfordern
-                </a>
+                </button>
               </div>
 
               <div className="bg-white p-8 rounded-2xl border-2 relative shadow-sm" style={{ borderColor: accentColor }}>
@@ -450,15 +455,15 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#contact"
+                <button
+                  onClick={() => setIsFormOpen(true)}
                   className="block w-full py-4 text-white rounded-lg text-center font-medium transition-colors"
                   style={{ backgroundColor: accentColor }}
                   onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
                   onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
                 >
                   Angebot anfordern
-                </a>
+                </button>
               </div>
             </div>
             <div className="mt-12 text-center text-gray-600 max-w-3xl mx-auto">
@@ -579,6 +584,10 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
         <ContactSection type="wedding" variant="light" accentColor={accentColor} />
 
         <Footer type="wedding" onNavigate={onNavigate} variant="light" />
+
+        <MultiStepForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} initialEventType="wedding" />
+        <WhatsAppButton />
+        <CookieBanner />
     </div>
   );
 };
