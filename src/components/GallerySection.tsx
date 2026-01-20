@@ -22,22 +22,10 @@ const galleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/gthBXHs.jpeg',
-    alt: 'Party Atmosphere',
-    category: 'Party',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/ARjfNZC.mp4',
     alt: 'DJ Performance',
     category: 'Video',
     type: 'video'
-  },
-  {
-    src: 'https://i.imgur.com/SC8oJvS.jpeg',
-    alt: 'Hochzeit',
-    category: 'Hochzeit',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/n15GPbv.jpeg',
@@ -64,18 +52,6 @@ const galleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/t0zaQat.jpeg',
-    alt: 'DJ Setup',
-    category: 'Setup',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/zBH9mtO.jpeg',
-    alt: 'Party Crowd',
-    category: 'Party',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/mUQWp9a.jpeg',
     alt: 'Hochzeitsfeier',
     category: 'Hochzeit',
@@ -91,12 +67,6 @@ const galleryItems: GalleryItem[] = [
     src: 'https://i.imgur.com/nISr7rf.jpeg',
     alt: 'Live Show',
     category: 'Live',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/SJb7hcc.jpeg',
-    alt: 'Party Night',
-    category: 'Party',
     type: 'image'
   },
   {

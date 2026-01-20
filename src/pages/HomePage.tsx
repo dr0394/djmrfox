@@ -251,14 +251,14 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 <div className="space-y-4">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                     <img
-                      src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      src="https://i.imgur.com/t0zaQat.jpeg"
                       alt="DJ Setup"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="aspect-square rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                     <img
-                      src="https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      src="https://i.imgur.com/zBH9mtO.jpeg"
                       alt="Party Crowd"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
@@ -267,15 +267,15 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 <div className="space-y-4 pt-8">
                   <div className="aspect-square rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                     <img
-                      src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      alt="DJ Performance"
+                      src="https://i.imgur.com/gthBXHs.jpeg"
+                      alt="Party Atmosphere"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                     <img
-                      src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      alt="Hochzeit Party"
+                      src="https://i.imgur.com/SC8oJvS.jpeg"
+                      alt="Hochzeit"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -377,7 +377,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
               className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[3/4] md:aspect-auto md:h-[550px] border border-gray-200 shadow-lg"
             >
               <img
-                src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://i.imgur.com/SJb7hcc.jpeg"
                 alt="Party"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
