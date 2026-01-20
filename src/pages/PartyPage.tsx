@@ -137,12 +137,6 @@ const partyGalleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/vJBPpbe.jpeg',
-    alt: 'Live Performance',
-    category: 'Live',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/cbNwVnC.jpeg',
     alt: 'Event Moment',
     category: 'Event',
