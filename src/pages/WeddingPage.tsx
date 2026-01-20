@@ -1,0 +1,529 @@
+import { Heart, Music, Mic, Sparkles, CheckCircle, Calendar, Clock, Users, Mail, Phone, Gift, Star, ArrowRight, Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import TestimonialSlider from '../components/TestimonialSlider';
+import FAQAccordion from '../components/FAQAccordion';
+import ContactSection from '../components/ContactSection';
+
+interface WeddingPageProps {
+  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
+}
+
+const accentColor = '#C09BB9';
+const accentColorLight = '#d4b8cf';
+const accentColorDark = '#a07a99';
+
+const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
+  const weddingTestimonials = [
+    {
+      text: "Die Musikauswahl war perfekt auf unsere Gäste zugeschnitten und die Tanzfläche war immer voll. Wir hätten uns keinen besseren DJ wünschen können!",
+      author: "Sandra & Michael",
+      event: "Hochzeit in Potsdam"
+    },
+    {
+      text: "Er hat alle unsere Wünsche erfüllt und sogar die, die wir gar nicht aufgeschrieben hatten. Die Stimmung war den ganzen Abend fantastisch!",
+      author: "Julia & Thomas",
+      event: "Hochzeit"
+    },
+    {
+      text: "Unsere Feier hat bis morgens um 6 Uhr gedauert, es war großartig! Alle Gäste waren begeistert und die Tanzfläche war nie leer.",
+      author: "Elisabeth & Martin",
+      event: "Hochzeit"
+    },
+    {
+      text: "Von der ersten Kontaktaufnahme bis zum letzten Tanz war alles perfekt organisiert. Die Moderation war charmant und die Musik einfach top!",
+      author: "Sarah & Daniel",
+      event: "Hochzeit"
+    }
+  ];
+
+  const weddingFaqs = [
+    {
+      question: "Wie weit im Voraus sollte ich für meine Hochzeit buchen?",
+      answer: "Eine frühzeitige Buchung ist sehr empfehlenswert, insbesondere für Hochzeiten an beliebten Terminen (Samstage in der Hochsaison Mai bis September). Idealerweise 6-12 Monate im Voraus, aber kontaktieren Sie mich gerne auch kurzfristig – manchmal lässt sich noch etwas einrichten."
+    },
+    {
+      question: "Können wir Sie vorher persönlich kennenlernen?",
+      answer: "Selbstverständlich! Ein persönliches Kennenlernen ist jederzeit möglich – entweder vor Ort, per Telefon oder via Skype/Videoanruf. So können wir alle Details besprechen und Sie bekommen ein Gefühl dafür, wer Ihren großen Tag musikalisch begleitet."
+    },
+    {
+      question: "Wie lange spielen Sie auf unserer Hochzeit?",
+      answer: "Ich biete verschiedene Pakete an: Ein Paket mit fester Endzeit (z.B. bis Mitternacht) oder die Open-End-Option, bei der ich so lange spiele, bis die letzten Gäste gehen. Die Open-End-Option ist besonders beliebt, da Sie sich keine Gedanken über zusätzliche Kosten machen müssen und die Party so lange dauern kann, wie Sie möchten."
+    },
+    {
+      question: "Gibt es während der Hochzeit Spielpausen?",
+      answer: "Nein, die Musik läuft durchgehend – außer Sie wünschen ausdrücklich eine Pause (z.B. für Reden oder Spiele). So bleibt die Stimmung konstant gut und die Tanzfläche gefüllt."
+    },
+    {
+      question: "Was benötigen Sie für Verpflegung und wie erfolgt die Bezahlung?",
+      answer: "Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung. Die Bezahlung erfolgt normalerweise nach der Hochzeit in bar. Alle Details werden im Angebot festgehalten."
+    },
+    {
+      question: "Wie viel Platz und welche technischen Voraussetzungen benötigen Sie?",
+      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 45-60 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
+    },
+    {
+      question: "Können wir unsere Musikwünsche mitteilen?",
+      answer: "Unbedingt! Sie erhalten von mir einen Musikwunschbogen, den Sie vor der Hochzeit ausfüllen können. Außerdem liegt am Veranstaltungstag ein Musikwunschzettel aus, sodass auch Ihre Gäste Wünsche äußern können. Eigene CDs sind ebenfalls willkommen."
+    },
+    {
+      question: "Können wir eigene CDs mitbringen?",
+      answer: "Ja, gerne! Bitte geben Sie mir Ihre CDs spätestens beim Vorgespräch oder am Veranstaltungstag, damit ich sie in die Playlist integrieren kann."
+    },
+    {
+      question: "Können Sie auch Kinderlieder spielen?",
+      answer: "Selbstverständlich! Ich habe eine große Auswahl an Kinderliedern und spiele diese sehr gerne, wenn junge Gäste dabei sind."
+    },
+    {
+      question: "Was passiert, wenn Sie krank werden?",
+      answer: "Für den unwahrscheinlichen Fall einer Erkrankung habe ich ein Netzwerk an professionellen Vertretungs-DJs, die einspringen können. Ihre Hochzeit ist in jedem Fall abgesichert."
+    }
+  ];
+
+  return (
+    <div className="relative bg-white">
+      <section className="relative min-h-screen">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://i.imgur.com/PW5BLgA.jpeg"
+            alt="Hochzeit"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+        </div>
+
+        <div className="relative z-10">
+          <Navigation currentPage="wedding" onNavigate={onNavigate} variant="dark" />
+
+          <div className="min-h-screen flex items-center overflow-hidden">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3 mb-10">
+              <svg viewBox="0 0 24 24" className="w-6 h-6 flex-shrink-0">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-white text-sm font-normal">5.0 auf Google</span>
+              </div>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[0.95] tracking-tight">
+              Euer Tag.{' '}
+              <span className="relative">
+                <span className="relative z-10" style={{ color: accentColorLight }}>
+                  Unvergesslich.
+                </span>
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl font-light">
+              Ich bin <strong className="text-white font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass eure Gäste
+              <span className="text-white font-semibold"> bis zum Morgengrauen tanzen</span>.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-medium transition-all shadow-2xl hover:shadow-xl"
+                style={{ backgroundColor: accentColor }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
+              >
+                Jetzt Anfrage senden
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <button
+                onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-white/50 text-white rounded-xl text-xl font-medium hover:bg-white/10 transition-all"
+              >
+                <Play className="w-6 h-6 text-white" />
+                Mehr erfahren
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 max-w-xl">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">200+</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Hochzeiten</div>
+              </div>
+              <div className="text-center border-l border-r border-white/30">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">20+</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Jahre</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">5.0</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Bewertung</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:block relative">
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-40" style={{ backgroundColor: accentColor }}></div>
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl">
+                <img
+                  src="https://i.imgur.com/CCjPfbc.jpeg"
+                  alt="DJ Mr. Fox bei einer Hochzeit"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 via-transparent to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: accentColor }}>
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-gray-900 font-medium">Ihr Hochzeits-DJ</div>
+                    <div className="text-gray-500 text-sm">Mit Herz & Erfahrung</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+          <div className="w-8 h-14 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+            <div className="w-2 h-3 rounded-full animate-pulse" style={{ backgroundColor: accentColorLight }}></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="meine-erfahrung" className="py-32 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-5 gap-16 items-start mb-32">
+              <div className="lg:col-span-3 space-y-8">
+                <div>
+                  <span className="text-sm font-medium tracking-widest uppercase" style={{ color: accentColor }}>Hochzeiten sind meine Leidenschaft</span>
+                  <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 mt-4 mb-8 leading-tight">
+                    Über 200 Hochzeiten – jede einzigartig
+                  </h2>
+                </div>
+                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
+                  <p className="text-2xl font-light text-gray-800">
+                    Ich durfte schon so viele Paare an ihrem schonsten Tag begleiten – und jede Hochzeit war anders. Jede hatte ihre eigene Geschichte, ihre eigene Stimmung, ihren eigenen Magic Moment.
+                  </p>
+                  <p>
+                    Von romantischen Schlosshochzeiten uber entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, euch zu verstehen, eure Gaste zu lesen und den richtigen Ton zu treffen.
+                  </p>
+                  <p>
+                    Der erste Tanz, der Moment wenn Oma mit Enkel tanzt, die wilden Partyphase um Mitternacht – ich kenne all diese Momente und weiß genau, welche Musik sie perfekt macht.
+                  </p>
+                </div>
+              </div>
+              <div className="lg:col-span-2">
+                <div className="sticky top-8 space-y-8">
+                  <img
+                    src="https://i.imgur.com/wo664zk.jpeg"
+                    alt="DJ Mr. Fox"
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-24">
+              <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-12 text-center">Warum Brautpaare mich wählen</h3>
+              <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
+                {[
+                  { title: 'Einfühlsame Begleitung', desc: 'Romantische Momente während der Trauung und beim ersten Tanz' },
+                  { title: 'Elegante Atmosphäre', desc: 'Dezente Hintergrundmusik beim Dinner, die Gespräche ermöglicht' },
+                  { title: 'Generationsübergreifend', desc: 'Tanzmusik, die von der Oma bis zum Enkel alle begeistert' },
+                  { title: 'Individuelle Beratung', desc: 'Persönliches Vorgespräch und maßgeschneiderte Musikauswahl' }
+                ].map((item, index) => (
+                  <div key={index} className="pb-8 border-b border-gray-200">
+                    <h4 className="text-xl font-medium text-gray-900 mb-3">{item.title}</h4>
+                    <p className="text-gray-600 font-light leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12 text-center">
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">200+</div>
+                <div className="text-lg text-gray-600 font-light">Hochzeiten</div>
+              </div>
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">20+</div>
+                <div className="text-lg text-gray-600 font-light">Jahre Erfahrung</div>
+              </div>
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">100%</div>
+                <div className="text-lg text-gray-600 font-light">Herzblut</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section id="services" className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-6">
+              Meine Leistungen für Ihren großen Tag
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto font-light">
+              Vom ersten Ton bis zum letzten Tanz – rundum-sorglos musikalische Begleitung
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Heart,
+                  title: 'Trauung & Zeremonie',
+                  description: 'Feierliche Musik für Ihren Einzug, die Zeremonie und den Auszug – perfekt abgestimmt auf Ihre Wünsche'
+                },
+                {
+                  icon: Sparkles,
+                  title: 'Sektempfang',
+                  description: 'Elegante Hintergrundmusik für entspannte Gespräche und erste Gratulationen'
+                },
+                {
+                  icon: Users,
+                  title: 'Dinner-Begleitung',
+                  description: 'Dezente, stilvolle Musik während des Essens – nicht zu laut, nicht zu leise'
+                },
+                {
+                  icon: Music,
+                  title: 'Eroffnungstanz',
+                  description: 'Beratung zur Songauswahl und professionelle Ansage Ihres ersten Tanzes als Ehepaar'
+                },
+                {
+                  icon: Mic,
+                  title: 'Moderation',
+                  description: 'Charmante Moderation von Programmpunkten, Reden, Spielen und Überraschungen'
+                },
+                {
+                  icon: Gift,
+                  title: 'Party-Musik',
+                  description: 'Tanzmusik für alle Altersgruppen – von Schlager bis Charts, von 60er bis heute'
+                }
+              ].map((service, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all shadow-sm">
+                  <service.icon className="w-12 h-12 mb-4" style={{ color: accentColor }} />
+                  <h3 className="text-xl font-medium text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 font-light">{service.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 bg-gray-50 p-8 rounded-2xl border-2" style={{ borderColor: `${accentColor}50` }}>
+              <h3 className="text-2xl font-medium text-gray-900 mb-4">Inklusive:</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  'Professionelle Licht- und Tontechnik',
+                  'Musikwunschbogen vorab',
+                  'Musikwunschzettel vor Ort',
+                  'Funkmikrofon für Reden',
+                  'Rednerpult (optional)',
+                  'Kinderlieder auf Wunsch',
+                  'Keine Spielpausen',
+                  'Persönliches Vorgespräch'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: accentColor }} />
+                    <span className="text-gray-700 font-light">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Pakete & Preise
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
+                <div className="text-center mb-6">
+                  <Clock className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Bis Mitternacht</h3>
+                  <p className="text-gray-600">Perfekt für klassische Hochzeitsfeiern</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Feste Endzeit (z.B. 0:00 Uhr)',
+                    'Alle Leistungen inklusive',
+                    'Musik von Trauung bis Mitternacht',
+                    'Planbare Kosten'
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact" className="block w-full py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-center font-medium transition-colors border border-gray-300">
+                  Angebot anfordern
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl border-2 relative shadow-sm" style={{ borderColor: accentColor }}>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-white px-6 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: accentColor }}>
+                  EMPFOHLEN
+                </div>
+                <div className="text-center mb-6">
+                  <Sparkles className="w-16 h-16 mx-auto mb-4" style={{ color: accentColor }} />
+                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Open End</h3>
+                  <p className="text-gray-700">Feiern Sie so lange Sie möchten!</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Keine Zeitbegrenzung',
+                    'Alle Leistungen inklusive',
+                    'Musik bis zum letzten Gast',
+                    'Keine Überraschungen beim Preis',
+                    'Maximale Flexibilität'
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: accentColor }} />
+                      <span className="text-gray-800 font-light">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className="block w-full py-4 text-white rounded-lg text-center font-medium transition-colors"
+                  style={{ backgroundColor: accentColor }}
+                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
+                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
+                >
+                  Angebot anfordern
+                </a>
+              </div>
+            </div>
+            <div className="mt-12 text-center text-gray-600 max-w-3xl mx-auto">
+              <p className="mb-4">
+                <strong className="text-gray-900">Verpflegung:</strong> Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung.
+              </p>
+              <p>
+                <strong className="text-gray-900">Bezahlung:</strong> Die Bezahlung erfolgt normalerweise nach der Hochzeit in bar. Alle Details werden im individuellen Angebot festgehalten.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Ablauf & Vorbereitung
+            </h2>
+            <div className="space-y-8">
+              {[
+                {
+                  step: '1',
+                  title: 'Unverbindliche Anfrage',
+                  description: 'Füllen Sie das Kontaktformular aus oder nutzen Sie den Rückrufservice. Teilen Sie mir Ihren Hochzeitstermin und Ihre Wünsche mit.',
+                  icon: Mail
+                },
+                {
+                  step: '2',
+                  title: 'Individuelles Angebot',
+                  description: 'Sie erhalten ein maßgeschneidertes Angebot per E-Mail. Nach Ihrer Bestätigung bekommen Sie eine Buchungsbestätigung.',
+                  icon: CheckCircle
+                },
+                {
+                  step: '3',
+                  title: 'Vorgesprach',
+                  description: 'Etwa zwei Wochen vor der Hochzeit führen wir ein ausführliches Telefonat zur Feinabstimmung: Eröffnungstanz, Spiele, Highlights, Musikwünsche.',
+                  icon: Phone
+                },
+                {
+                  step: '4',
+                  title: 'Aufbau & Soundcheck',
+                  description: 'Ich reise ca. 90 Minuten vor Beginn der Trauung an und baue das komplette Equipment auf. Alles wird getestet und perfekt vorbereitet.',
+                  icon: Music
+                },
+                {
+                  step: '5',
+                  title: 'Ihr großer Tag',
+                  description: 'Von der Trauung bis zum letzten Tanz bin ich für Sie da. Musikwünsche werden jederzeit entgegengenommen und umgesetzt.',
+                  icon: Heart
+                },
+                {
+                  step: '6',
+                  title: 'Feedback',
+                  description: 'Nach Ihrer Hochzeit freue ich mich über Ihr Feedback. Ihre Erfahrung hilft mir, noch besser zu werden.',
+                  icon: Sparkles
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex gap-6 items-start bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 text-white rounded-full flex items-center justify-center text-2xl font-medium" style={{ backgroundColor: accentColor }}>
+                      {item.step}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <item.icon className="w-8 h-8" style={{ color: accentColor }} />
+                      <h3 className="text-2xl font-medium text-gray-900">{item.title}</h3>
+                    </div>
+                    <p className="text-gray-600 text-lg font-light">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Impressionen
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600'
+              ].map((img, index) => (
+                <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
+                  <img src={img} alt={`Hochzeit ${index + 1}`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity" style={{ backgroundColor: accentColor }}></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Das sagen unsere Brautpaare
+            </h2>
+            <TestimonialSlider testimonials={weddingTestimonials} accentColor="mauve" variant="light" />
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Häufige Fragen
+            </h2>
+            <FAQAccordion faqs={weddingFaqs} accentColor="mauve" variant="light" />
+          </div>
+        </section>
+
+        <ContactSection type="wedding" variant="light" accentColor={accentColor} />
+
+        <Footer type="wedding" onNavigate={onNavigate} variant="light" />
+    </div>
+  );
+};
+
+export default WeddingPage;

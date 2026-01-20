@@ -1,0 +1,568 @@
+import { PartyPopper, Music, Mic, Zap, CheckCircle, Calendar, Clock, Users, Mail, Phone, Building2, Award, Star, ArrowRight, Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import TestimonialSlider from '../components/TestimonialSlider';
+import FAQAccordion from '../components/FAQAccordion';
+import ContactSection from '../components/ContactSection';
+
+interface PartyPageProps {
+  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
+}
+
+const accentColor = '#FF6B00';
+const accentColorLight = '#FF8C33';
+const accentColorDark = '#E05A00';
+
+const PartyPage = ({ onNavigate }: PartyPageProps) => {
+  const partyTestimonials = [
+    {
+      text: "Perfekt abgestimmte Musikauswahl, die auch ein Publikum mit gemischtem Alter begeistert. Die Tanzflache war die ganze Nacht voll!",
+      author: "Thomas K.",
+      event: "Firmenfeier"
+    },
+    {
+      text: "Eine unvergessliche Nacht bis 4 Uhr morgens! Der DJ hat einfach den richtigen Riecher fur gute Musik und perfektes Timing.",
+      author: "Britta",
+      event: "60. Geburtstag"
+    },
+    {
+      text: "Unsere Firmenfeier war ein voller Erfolg. Alle Kollegen waren begeistert und die Stimmung war fantastisch!",
+      author: "Elisabeth M.",
+      event: "Jahresabschlussfeier"
+    },
+    {
+      text: "Die Moderation war professionell und hat die Feier perfekt strukturiert. Wurden wir jederzeit wieder buchen!",
+      author: "Kerstin",
+      event: "Firmenevent"
+    }
+  ];
+
+  const partyFaqs = [
+    {
+      question: "Wie weit im Voraus sollte ich für meine Party buchen?",
+      answer: "Eine rechtzeitige Buchung ist empfehlenswert, besonders für beliebte Termine wie Silvester, Fasching oder Wochenenden in der Hauptsaison. Idealerweise 3-6 Monate im Voraus, aber kontaktieren Sie mich gerne auch kurzfristig."
+    },
+    {
+      question: "Können wir Sie vorher persönlich kennenlernen?",
+      answer: "Selbstverständlich! Ein persönliches Kennenlernen ist jederzeit möglich – entweder vor Ort, per Telefon oder via Skype/Videoanruf. So können wir alle Details besprechen und Sie bekommen ein Gefühl dafür, wer Ihre Feier musikalisch begleitet."
+    },
+    {
+      question: "Wie lange spielen Sie auf unserer Party?",
+      answer: "Ich biete verschiedene Pakete an: Ein Paket mit fester Endzeit (z.B. bis Mitternacht) oder die Open-End-Option, bei der ich so lange spiele, bis die letzten Gäste gehen. Die Open-End-Option ist besonders beliebt für Partys ohne Zeitlimit."
+    },
+    {
+      question: "Gibt es während der Party Spielpausen?",
+      answer: "Nein, die Musik läuft durchgehend – außer Sie wünschen ausdrücklich eine Pause (z.B. für Reden oder Spiele). So bleibt die Energie konstant hoch und die Tanzfläche gefüllt."
+    },
+    {
+      question: "Was benötigen Sie für Verpflegung und wie erfolgt die Bezahlung?",
+      answer: "Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung. Die Bezahlung erfolgt normalerweise nach der Party in bar. Alle Details werden im Angebot festgehalten."
+    },
+    {
+      question: "Wie viel Platz und welche technischen Voraussetzungen benötigen Sie?",
+      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 45-60 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
+    },
+    {
+      question: "Können wir unsere Musikwünsche mitteilen?",
+      answer: "Unbedingt! Sie erhalten von mir einen Musikwunschbogen, den Sie vor der Party ausfüllen können. Außerdem liegt am Veranstaltungstag ein Musikwunschzettel aus, sodass auch Ihre Gäste Wünsche äußern können."
+    },
+    {
+      question: "Können wir eigene CDs mitbringen?",
+      answer: "Ja, gerne! Bitte geben Sie mir Ihre CDs spätestens beim Vorgespräch oder am Veranstaltungstag, damit ich sie in die Playlist integrieren kann."
+    },
+    {
+      question: "Können Sie auch Kinderlieder spielen?",
+      answer: "Selbstverständlich! Ich habe eine große Auswahl an Kinderliedern und spiele diese sehr gerne, wenn junge Gäste dabei sind."
+    },
+    {
+      question: "Was ist, wenn die Location bereits eine Anlage hat?",
+      answer: "Ich kann auch die vorhandene Anlage der Location nutzen, sofern sie meinen technischen Anforderungen entspricht. Allerdings kann ich für Ausfälle der Location-Technik keine Haftung übernehmen."
+    }
+  ];
+
+  return (
+    <div className="relative bg-white">
+      <section className="relative min-h-screen">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://i.imgur.com/tPiandQ.jpeg"
+            alt="Party"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+        </div>
+
+        <div className="relative z-10">
+          <Navigation currentPage="party" onNavigate={onNavigate} variant="dark" />
+
+          <div className="min-h-screen flex items-center overflow-hidden">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3 mb-10">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 flex-shrink-0">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <div className="flex items-center gap-2">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-white text-sm font-normal">5.0 auf Google</span>
+                    </div>
+                  </div>
+
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[0.95] tracking-tight">
+                    Eure Party.{' '}
+                    <span className="relative">
+                      <span className="relative z-10" style={{ color: accentColorLight }}>
+                        Unvergesslich.
+                      </span>
+                    </span>
+                  </h1>
+
+                  <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl font-light">
+                    Ich bin <strong className="text-white font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass eure Gäste
+                    <span className="text-white font-semibold"> bis zum Morgengrauen tanzen</span>.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mb-16">
+                    <a
+                      href="#contact"
+                      className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-medium transition-all shadow-2xl hover:shadow-xl"
+                      style={{ backgroundColor: accentColor }}
+                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
+                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
+                    >
+                      Jetzt Anfrage senden
+                      <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                    <button
+                      onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-white/50 text-white rounded-xl text-xl font-medium hover:bg-white/10 transition-all"
+                    >
+                      <Play className="w-6 h-6 text-white" />
+                      Mehr erfahren
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-8 max-w-xl">
+                    <div className="text-center">
+                      <div className="text-4xl md:text-5xl font-semibold text-white mb-1">300+</div>
+                      <div className="text-white/70 text-sm uppercase tracking-wider font-light">Partys</div>
+                    </div>
+                    <div className="text-center border-l border-r border-white/30">
+                      <div className="text-4xl md:text-5xl font-semibold text-white mb-1">20+</div>
+                      <div className="text-white/70 text-sm uppercase tracking-wider font-light">Jahre</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl md:text-5xl font-semibold text-white mb-1">5.0</div>
+                      <div className="text-white/70 text-sm uppercase tracking-wider font-light">Bewertung</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="hidden lg:block relative">
+                  <div className="relative max-w-md mx-auto">
+                    <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-40" style={{ backgroundColor: accentColor }}></div>
+                    <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl">
+                      <img
+                        src="https://i.imgur.com/BB5h6bP.jpeg"
+                        alt="DJ Mr. Fox bei einer Party"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 via-transparent to-transparent"></div>
+                    </div>
+                    <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-2xl">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: accentColor }}>
+                          <Music className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-gray-900 font-medium">Ihr Party-DJ</div>
+                          <div className="text-gray-500 text-sm">20+ Jahre Erfahrung</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+          <div className="w-8 h-14 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+            <div className="w-2 h-3 rounded-full animate-pulse" style={{ backgroundColor: accentColorLight }}></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="meine-erfahrung" className="py-32 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-5 gap-16 items-start mb-32">
+              <div className="lg:col-span-3 space-y-8">
+                <div>
+                  <span className="text-sm font-medium tracking-widest uppercase" style={{ color: accentColor }}>Partys sind meine Leidenschaft</span>
+                  <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 mt-4 mb-8 leading-tight">
+                    Über 300 Partys – jede unvergesslich
+                  </h2>
+                </div>
+                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
+                  <p className="text-2xl font-light text-gray-800">
+                    Von intimen Geburtstagsfeiern über große Firmenfeste bis zu legendären Festival-Nächten – ich habe sie alle erlebt. Und jede Party war einzigartig.
+                  </p>
+                  <p>
+                    Ob entspannte Lounge-Atmosphäre beim Dinner oder energiegeladene Tanzmusik bis zum Morgengrauen – ich weiß genau, welcher Sound zu welchem Moment passt. Ich lese die Stimmung, spüre die Energie und weiß, wann es Zeit ist für den nächsten Hit.
+                  </p>
+                  <p>
+                    Von Charts über Classics bis zu speziellen Wünschen – mein Repertoire ist so vielseitig wie eure Gäste. Hauptsache: Die Tanzfläche ist voll und die Stimmung ist perfekt.
+                  </p>
+                  <p>
+                    Seit 2005 werde ich im Ausland als DJ für die Clubs des Premium-Reiseveranstalter ALDIANA gebucht.
+                  </p>
+                </div>
+              </div>
+              <div className="lg:col-span-2">
+                <div className="sticky top-8 space-y-8">
+                  <img
+                    src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="DJ Performance"
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                  <img
+                    src="https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Party Crowd"
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-24">
+              <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-12 text-center">Warum Firmen und Privatpersonen mich wählen</h3>
+              <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
+                {[
+                  { title: 'Stimmungsvolles Gespür', desc: 'Ich lese die Tanzfläche und reagiere in Echtzeit auf die Energie' },
+                  { title: 'Vielseitiges Repertoire', desc: 'Von Chart-Hits bis Classics – für jedes Publikum den richtigen Sound' },
+                  { title: 'Internationale Erfahrung', desc: 'Seit 2005 ALDIANA-DJ mit Erfahrung in mehrsprachigen Events weltweit' },
+                  { title: 'Open-End-Flexibilität', desc: 'Keine Zeitlimits – ich spiele, bis die letzten Gäste gehen' }
+                ].map((item, index) => (
+                  <div key={index} className="pb-8 border-b border-gray-200">
+                    <h4 className="text-xl font-medium text-gray-900 mb-3">{item.title}</h4>
+                    <p className="text-gray-600 font-light leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12 text-center">
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">300+</div>
+                <div className="text-lg text-gray-600 font-light">Partys & Events</div>
+              </div>
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">20+</div>
+                <div className="text-lg text-gray-600 font-light">Jahre Erfahrung</div>
+              </div>
+              <div>
+                <div className="text-5xl font-semibold text-gray-900 mb-3">100%</div>
+                <div className="text-lg text-gray-600 font-light">Energie</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section id="services" className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-6">
+              Anlässe & Event-Typen
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto font-light">
+              Professioneller DJ-Service für jeden Anlass – maßgeschneidert auf eure Party
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Award,
+                  title: 'Geburtstagsfeiern',
+                  description: 'Vom 18. bis zum 80. Geburtstag – Musik für alle Generationen'
+                },
+                {
+                  icon: Building2,
+                  title: 'Firmenfeiern',
+                  description: 'Jahresabschluss, Jubiläen, Sommerfeste – professionell und unterhaltsam'
+                },
+                {
+                  icon: PartyPopper,
+                  title: 'Silvester & Fasching',
+                  description: 'Die Klassiker des Jahres – mit der perfekten Partymusik'
+                },
+                {
+                  icon: Music,
+                  title: 'Abi-Ball & Jugendweihe',
+                  description: 'Moderne Hits und Classics für junge Leute und ihre Familien'
+                },
+                {
+                  icon: Users,
+                  title: 'Dorf- & Stadtfeste',
+                  description: 'Große Events im Freien mit professioneller Beschallung'
+                },
+                {
+                  icon: Zap,
+                  title: 'Private Feiern',
+                  description: 'Polterabend, Junggesellenabschied – eure Party, eure Regeln'
+                }
+              ].map((service, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all shadow-sm">
+                  <service.icon className="w-12 h-12 mb-4" style={{ color: accentColor }} />
+                  <h3 className="text-xl font-medium text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 font-light">{service.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 bg-gray-50 p-8 rounded-2xl border-2" style={{ borderColor: `${accentColor}50` }}>
+              <h3 className="text-2xl font-medium text-gray-900 mb-4">Inklusive:</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  'Professionelle Licht- und Tontechnik',
+                  'Musikwunschbogen vorab',
+                  'Musikwunschzettel vor Ort',
+                  'Funkmikrofon für Ansagen',
+                  'Moderation auf Wunsch',
+                  'Kinderlieder auf Wunsch',
+                  'Keine Spielpausen',
+                  'Persönliches Vorgespräch'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: accentColor }} />
+                    <span className="text-gray-700 font-light">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Pakete & Preise
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
+                <div className="text-center mb-6">
+                  <Clock className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Basis-Paket</h3>
+                  <p className="text-gray-600">Perfekt für Events mit festem Zeitplan</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Feste Endzeit (z.B. 0:00 Uhr)',
+                    'Alle Leistungen inklusive',
+                    'Musik vom Start bis zur Endzeit',
+                    'Planbare Kosten'
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact" className="block w-full py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-center font-medium transition-colors border border-gray-300">
+                  Angebot anfordern
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl border-2 relative shadow-sm" style={{ borderColor: accentColor }}>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-white px-6 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: accentColor }}>
+                  EMPFOHLEN
+                </div>
+                <div className="text-center mb-6">
+                  <Zap className="w-16 h-16 mx-auto mb-4" style={{ color: accentColor }} />
+                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Open End</h3>
+                  <p className="text-gray-700">Feiert so lange ihr möchtet!</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Keine Zeitbegrenzung',
+                    'Alle Leistungen inklusive',
+                    'Musik bis zum letzten Gast',
+                    'Keine Überraschungen beim Preis',
+                    'Maximale Flexibilität'
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: accentColor }} />
+                      <span className="text-gray-800 font-light">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className="block w-full py-4 text-white rounded-lg text-center font-medium transition-colors"
+                  style={{ backgroundColor: accentColor }}
+                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
+                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
+                >
+                  Angebot anfordern
+                </a>
+              </div>
+            </div>
+            <div className="mt-12 text-center text-gray-600 max-w-3xl mx-auto">
+              <p className="mb-4">
+                <strong className="text-gray-900">Verpflegung:</strong> Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung.
+              </p>
+              <p>
+                <strong className="text-gray-900">Bezahlung:</strong> Die Bezahlung erfolgt normalerweise nach der Party in bar. Alle Details werden im individuellen Angebot festgehalten.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Ablauf & Vorbereitung
+            </h2>
+            <div className="space-y-8">
+              {[
+                {
+                  step: '1',
+                  title: 'Unverbindliche Anfrage',
+                  description: 'Füllen Sie das Kontaktformular aus oder nutzen Sie den Rückrufservice. Teilen Sie mir Ihren Termin und Ihre Wünsche mit.',
+                  icon: Mail
+                },
+                {
+                  step: '2',
+                  title: 'Individuelles Angebot',
+                  description: 'Sie erhalten ein maßgeschneidertes Angebot per E-Mail. Nach Ihrer Bestätigung bekommen Sie eine Buchungsbestätigung.',
+                  icon: CheckCircle
+                },
+                {
+                  step: '3',
+                  title: 'Vorgesprach',
+                  description: 'Etwa zwei Wochen vor der Party führen wir ein ausführliches Telefonat zur Feinabstimmung: Programm, Highlights, Musikwünsche.',
+                  icon: Phone
+                },
+                {
+                  step: '4',
+                  title: 'Aufbau & Soundcheck',
+                  description: 'Ich reise ca. 90 Minuten vor Beginn an und baue das komplette Equipment auf. Alles wird getestet und perfekt vorbereitet.',
+                  icon: Music
+                },
+                {
+                  step: '5',
+                  title: 'Eure Party',
+                  description: 'Vom ersten Song bis zum letzten Tanz bin ich für Sie da. Musikwünsche werden jederzeit entgegengenommen und umgesetzt.',
+                  icon: PartyPopper
+                },
+                {
+                  step: '6',
+                  title: 'Feedback',
+                  description: 'Nach Ihrer Party freue ich mich über Ihr Feedback. Ihre Erfahrung hilft mir, noch besser zu werden.',
+                  icon: Zap
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex gap-6 items-start bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 text-white rounded-full flex items-center justify-center text-2xl font-medium" style={{ backgroundColor: accentColor }}>
+                      {item.step}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <item.icon className="w-8 h-8" style={{ color: accentColor }} />
+                      <h3 className="text-2xl font-medium text-gray-900">{item.title}</h3>
+                    </div>
+                    <p className="text-gray-600 text-lg font-light">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Impressionen & Equipment
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+              {[
+                'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600',
+                'https://images.pexels.com/photos/2102949/pexels-photo-2102949.jpeg?auto=compress&cs=tinysrgb&w=600'
+              ].map((img, index) => (
+                <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
+                  <img src={img} alt={`Party ${index + 1}`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity" style={{ backgroundColor: accentColor }}></div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-white p-8 rounded-2xl border-2 shadow-sm" style={{ borderColor: `${accentColor}50` }}>
+              <h3 className="text-2xl font-medium text-gray-900 mb-6 text-center">Technische Details</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: 'Professionelle Technik',
+                    items: ['Computergesteuerte Lichtanlage der Spitzenklasse inkl. Nebelmaschine & Lasershow', 'Ca. 2×3 m Platzbedarf', 'Standard-Stromanschluss (230V)', 'Kompletter Aufbau in 90-120 Min.']
+                  },
+                  {
+                    title: 'Musikservice',
+                    items: ['Keine Spielpausen', 'Musikwunschbogen & -zettel', 'Eigene CDs willkommen', 'Riesiges Musikarchiv', 'Kinderlieder auf Wunsch']
+                  },
+                  {
+                    title: 'Moderation',
+                    items: ['Professionelle Moderation', 'Ansagen & Programmpunkte', 'Internationale Events', 'Mehrsprachige Ansagen']
+                  }
+                ].map((section, index) => (
+                  <div key={index}>
+                    <h4 className="text-lg font-medium text-gray-900 mb-4">{section.title}</h4>
+                    <ul className="space-y-2">
+                      {section.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                          <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: accentColor }} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Das sagen meine Kunden
+            </h2>
+            <TestimonialSlider testimonials={partyTestimonials} accentColor="orange" variant="light" />
+          </div>
+        </section>
+
+      <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+              Häufige Fragen
+            </h2>
+            <FAQAccordion faqs={partyFaqs} accentColor="orange" variant="light" />
+          </div>
+        </section>
+
+        <ContactSection type="party" variant="light" accentColor={accentColor} />
+
+        <Footer type="party" onNavigate={onNavigate} variant="light" />
+    </div>
+  );
+};
+
+export default PartyPage;
