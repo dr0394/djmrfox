@@ -334,6 +334,60 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
           </div>
         </section>
 
+        <section className="py-28 px-4 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-40"></div>
+
+          <div className="max-w-4xl mx-auto text-center relative mb-28">
+            <h2 className="text-3xl md:text-4xl font-semibold text-white/60 mb-6">
+              Unsicher, ob ein DJ zu deinem Event passt?
+            </h2>
+
+            <div className="space-y-8 mb-12">
+              <p className="text-2xl md:text-3xl lg:text-4xl text-white font-light leading-relaxed">
+                Dein Event verdient <strong className="font-semibold text-cyan-400">keinen Show-DJ</strong>, sondern Musik, die im richtigen Moment das Richtige tut.
+              </p>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto font-light">
+                Ich arbeite ohne starre Playlists und passe mich dir und deinen Gästen an – von der ersten bis zur letzten Minute.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 mb-10">
+              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                Neugierig auf meinen Stil?
+              </h3>
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 font-light">
+                Ich erstelle dir einen kurzen <strong className="font-semibold text-cyan-400">3-Song-Mix</strong>, der zeigt, wie sich dein Event anfühlen könnte.
+              </p>
+
+              <div className="space-y-6 text-lg md:text-xl text-white/80 mb-10 font-light">
+                <p>
+                  Wenn du denkst: <span className="text-white font-medium italic">"Ja, genau so soll mein Event klingen"</span> – perfekt.
+                </p>
+                <p>
+                  Wenn nicht, dann passen wir nicht zusammen – was völlig in Ordnung ist.
+                </p>
+              </div>
+
+              <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-white/70 text-sm mb-8">
+                <span>Hochzeiten & Events</span>
+                <span className="hidden sm:inline">•</span>
+                <span>Berlin & Umgebung + 150 km</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="font-medium text-cyan-400">Termine 2026 verfügbar</span>
+              </div>
+
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-3 px-10 py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl text-xl font-semibold transition-all shadow-2xl hover:shadow-cyan-500/30"
+              >
+                Jetzt kurz schreiben und Mix erhalten
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="py-28 px-4 bg-white/[0.15] backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
