@@ -1,4 +1,5 @@
-import { PartyPopper, Music, Mic, Zap, CheckCircle, Calendar, Clock, Users, Mail, Phone, Building2, Award, Star, ArrowRight, Play } from 'lucide-react';
+import { PartyPopper, Music, Mic, Zap, CheckCircle, Calendar, Clock, Users, Mail, Phone, Building2, Award, Star, ArrowRight, Play, ZoomIn, X } from 'lucide-react';
+import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import TestimonialSlider from '../components/TestimonialSlider';
@@ -13,7 +14,182 @@ const accentColor = '#FF6B00';
 const accentColorLight = '#FF8C33';
 const accentColorDark = '#E05A00';
 
+interface GalleryItem {
+  src: string;
+  alt: string;
+  category: string;
+  type: 'image' | 'video';
+}
+
+const partyGalleryItems: GalleryItem[] = [
+  {
+    src: 'https://i.imgur.com/4kkvnHE.mp4',
+    alt: 'Event Video',
+    category: 'Video',
+    type: 'video'
+  },
+  {
+    src: 'https://i.imgur.com/8xlq3h6.jpeg',
+    alt: 'Event Moment',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/gthBXHs.jpeg',
+    alt: 'Party Atmosphere',
+    category: 'Party',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/ARjfNZC.mp4',
+    alt: 'DJ Performance',
+    category: 'Video',
+    type: 'video'
+  },
+  {
+    src: 'https://i.imgur.com/SC8oJvS.jpeg',
+    alt: 'Hochzeit',
+    category: 'Hochzeit',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/n15GPbv.jpeg',
+    alt: 'Event Setup',
+    category: 'Setup',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/NDVGL8o.jpeg',
+    alt: 'Live Performance',
+    category: 'Live',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/33mTfAt.mp4',
+    alt: 'Party Video',
+    category: 'Video',
+    type: 'video'
+  },
+  {
+    src: 'https://i.imgur.com/zVKZ8X6.jpeg',
+    alt: 'Event Moment',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/t0zaQat.jpeg',
+    alt: 'DJ Setup',
+    category: 'Setup',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/zBH9mtO.jpeg',
+    alt: 'Party Crowd',
+    category: 'Party',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/mUQWp9a.jpeg',
+    alt: 'Hochzeitsfeier',
+    category: 'Hochzeit',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/GDHRbrT.jpeg',
+    alt: 'Event Atmosphere',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/nISr7rf.jpeg',
+    alt: 'Live Show',
+    category: 'Live',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/SJb7hcc.jpeg',
+    alt: 'Party Night',
+    category: 'Party',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/KPytLRO.jpeg',
+    alt: 'Event Details',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/95rGaKS.jpeg',
+    alt: 'DJ Equipment',
+    category: 'Setup',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/azx2njQ.jpeg',
+    alt: 'Hochzeit Celebration',
+    category: 'Hochzeit',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/lYwzPd6.jpeg',
+    alt: 'Party Energy',
+    category: 'Party',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/f67oWfe.jpeg',
+    alt: 'Event Highlights',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/vJBPpbe.jpeg',
+    alt: 'Live Performance',
+    category: 'Live',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/cbNwVnC.jpeg',
+    alt: 'Event Moment',
+    category: 'Event',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/7e8IUh2.jpeg',
+    alt: 'Party Scene',
+    category: 'Party',
+    type: 'image'
+  },
+  {
+    src: 'https://i.imgur.com/3zDqrc5.jpeg',
+    alt: 'Event Memory',
+    category: 'Event',
+    type: 'image'
+  }
+];
+
 const PartyPage = ({ onNavigate }: PartyPageProps) => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setActiveImage(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = '';
+  };
+
+  const nextImage = () => {
+    setActiveImage((prev) => (prev + 1) % partyGalleryItems.length);
+  };
+
+  const prevImage = () => {
+    setActiveImage((prev) => (prev - 1 + partyGalleryItems.length) % partyGalleryItems.length);
+  };
   const partyTestimonials = [
     {
       text: "Perfekt abgestimmte Musikauswahl, die auch ein Publikum mit gemischtem Alter begeistert. Die Tanzflache war die ganze Nacht voll!",
@@ -492,17 +668,49 @@ const PartyPage = ({ onNavigate }: PartyPageProps) => {
               Impressionen & Equipment
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-              {[
-                'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/2102949/pexels-photo-2102949.jpeg?auto=compress&cs=tinysrgb&w=600'
-              ].map((img, index) => (
-                <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
-                  <img src={img} alt={`Party ${index + 1}`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity" style={{ backgroundColor: accentColor }}></div>
+              {partyGalleryItems.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => openLightbox(index)}
+                  className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg"
+                >
+                  {item.type === 'video' ? (
+                    <>
+                      <video
+                        src={item.src}
+                        className="w-full h-full object-cover"
+                        muted
+                        playsInline
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-gray-900/40">
+                        <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+                          <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center mb-3 transform scale-75 group-hover:scale-100 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 107, 0, 0.2)' }}>
+                      {item.type === 'video' ? (
+                        <Play className="w-6 h-6 text-white" />
+                      ) : (
+                        <ZoomIn className="w-6 h-6 text-white" />
+                      )}
+                    </div>
+                    <span className="text-white font-medium">{item.category}</span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="inline-block px-3 py-1 text-white text-xs font-medium rounded-full" style={{ backgroundColor: 'rgba(255, 107, 0, 0.8)' }}>
+                      {item.category}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -561,6 +769,78 @@ const PartyPage = ({ onNavigate }: PartyPageProps) => {
         <ContactSection type="party" variant="light" accentColor={accentColor} />
 
         <Footer type="party" onNavigate={onNavigate} variant="light" />
+
+        {lightboxOpen && (
+          <div
+            className="fixed inset-0 z-50 bg-gray-950/95 backdrop-blur-xl flex items-center justify-center"
+            onClick={closeLightbox}
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors z-10"
+            >
+              <X className="w-6 h-6 text-white" />
+            </button>
+
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="absolute left-4 md:left-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors z-10"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="absolute right-4 md:right-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors z-10"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div
+              className="max-w-5xl max-h-[85vh] px-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {partyGalleryItems[activeImage].type === 'video' ? (
+                <video
+                  src={partyGalleryItems[activeImage].src}
+                  controls
+                  autoPlay
+                  className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+                />
+              ) : (
+                <img
+                  src={partyGalleryItems[activeImage].src}
+                  alt={partyGalleryItems[activeImage].alt}
+                  className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+                />
+              )}
+              <div className="text-center mt-4">
+                <span className="text-white font-medium">{partyGalleryItems[activeImage].alt}</span>
+                <span className="text-gray-500 mx-3">|</span>
+                <span style={{ color: accentColorLight }}>{partyGalleryItems[activeImage].category}</span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+              {partyGalleryItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={(e) => { e.stopPropagation(); setActiveImage(index); }}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === activeImage
+                      ? 'w-6'
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  style={index === activeImage ? { backgroundColor: accentColor } : {}}
+                />
+              ))}
+            </div>
+          </div>
+        )}
     </div>
   );
 };
