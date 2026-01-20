@@ -131,12 +131,6 @@ const partyGalleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/lYwzPd6.jpeg',
-    alt: 'Party Energy',
-    category: 'Party',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/f67oWfe.jpeg',
     alt: 'Event Highlights',
     category: 'Event',
@@ -152,12 +146,6 @@ const partyGalleryItems: GalleryItem[] = [
     src: 'https://i.imgur.com/cbNwVnC.jpeg',
     alt: 'Event Moment',
     category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/7e8IUh2.jpeg',
-    alt: 'Party Scene',
-    category: 'Party',
     type: 'image'
   },
   {
@@ -406,13 +394,13 @@ const PartyPage = ({ onNavigate }: PartyPageProps) => {
               <div className="lg:col-span-2">
                 <div className="sticky top-8 space-y-8">
                   <img
-                    src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="DJ Performance"
+                    src="https://i.imgur.com/lYwzPd6.jpeg"
+                    alt="Party Energy"
                     className="w-full rounded-2xl shadow-2xl"
                   />
                   <img
-                    src="https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Party Crowd"
+                    src="https://i.imgur.com/7e8IUh2.jpeg"
+                    alt="Party Scene"
                     className="w-full rounded-2xl shadow-2xl"
                   />
                 </div>
