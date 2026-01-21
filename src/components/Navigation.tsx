@@ -116,7 +116,7 @@ const Navigation = ({ currentPage, onNavigate, variant }: NavigationProps) => {
                   <span className="text-white font-semibold text-lg">DJ</span>
                 </div>
                 <div className="text-left hidden sm:block">
-                  <div className="text-lg font-medium tracking-tight">DJ Mr. Fox</div>
+                  <div className="text-lg font-medium tracking-tight">Mr. Fox</div>
                   <div className="text-xs opacity-60 tracking-wide">DJ & Entertainment</div>
                 </div>
               </>
