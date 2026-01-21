@@ -123,11 +123,11 @@ const GallerySection = () => {
   };
 
   const nextImage = () => {
-    setActiveImage((prev) => (prev + 1) % galleryImages.length);
+    setActiveImage((prev) => (prev + 1) % galleryItems.length);
   };
 
   const prevImage = () => {
-    setActiveImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    setActiveImage((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
   };
 
   return (
