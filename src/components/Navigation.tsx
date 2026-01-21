@@ -113,7 +113,7 @@ const Navigation = ({ currentPage, onNavigate, variant }: NavigationProps) => {
             ) : (
               <>
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-semibold text-lg">MF</span>
+                  <span className="text-white font-semibold text-lg">DJ</span>
                 </div>
                 <div className="text-left hidden sm:block">
                   <div className="text-lg font-medium tracking-tight">DJ Mr. Fox</div>
