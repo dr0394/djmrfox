@@ -106,12 +106,6 @@ const galleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/cbNwVnC.jpeg',
-    alt: 'Event Moment',
-    category: 'Event',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/7e8IUh2.jpeg',
     alt: 'Party Scene',
     category: 'Party',
