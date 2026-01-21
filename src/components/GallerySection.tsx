@@ -52,12 +52,6 @@ const galleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/mUQWp9a.jpeg',
-    alt: 'Hochzeitsfeier',
-    category: 'Hochzeit',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/GDHRbrT.jpeg',
     alt: 'Event Atmosphere',
     category: 'Event',
