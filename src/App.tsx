@@ -10,7 +10,7 @@ function App() {
 
   const navigateTo = (page: PageType) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   return (
