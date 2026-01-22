@@ -9,15 +9,11 @@ import MultiStepForm from '../components/MultiStepForm';
 import WhatsAppButton from '../components/WhatsAppButton';
 import CookieBanner from '../components/CookieBanner';
 
-interface WeddingPageProps {
-  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
-}
-
 const accentColor = '#C09BB9';
 const accentColorLight = '#d4b8cf';
 const accentColorDark = '#a07a99';
 
-const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
+const WeddingPage = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const weddingTestimonials = [
     {
@@ -98,7 +94,7 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
         </div>
 
         <div className="relative z-10">
-          <Navigation currentPage="wedding" onNavigate={onNavigate} variant="dark" />
+          <Navigation />
 
           <div className="min-h-screen flex items-center overflow-hidden">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
@@ -583,7 +579,7 @@ const WeddingPage = ({ onNavigate }: WeddingPageProps) => {
 
         <ContactSection type="wedding" variant="light" accentColor={accentColor} />
 
-        <Footer type="wedding" onNavigate={onNavigate} variant="light" />
+        <Footer />
 
         <MultiStepForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} initialEventType="wedding" />
         <WhatsAppButton />

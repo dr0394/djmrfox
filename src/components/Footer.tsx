@@ -1,15 +1,13 @@
 import { Music2, Mail, Phone, MapPin, Heart, ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-interface FooterProps {
-  type: 'home' | 'wedding' | 'party';
-  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
-  variant?: 'light' | 'dark';
-}
-
-const Footer = ({ type, onNavigate }: FooterProps) => {
+const Footer = () => {
   const [showImpressum, setShowImpressum] = useState(false);
   const [showDatenschutz, setShowDatenschutz] = useState(false);
+  const location = useLocation();
+
+  const type = location.pathname === '/hochzeit' ? 'wedding' : location.pathname === '/party' ? 'party' : 'home';
 
   const isWedding = type === 'wedding';
   const isParty = type === 'party';
@@ -30,8 +28,8 @@ const Footer = ({ type, onNavigate }: FooterProps) => {
         <div className="max-w-7xl mx-auto px-4 pt-20 pb-8 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <button
-                onClick={() => onNavigate('home')}
+              <Link
+                to="/"
                 className="flex items-center gap-4 mb-6 hover:opacity-80 transition-opacity"
               >
                 <div
@@ -48,7 +46,7 @@ const Footer = ({ type, onNavigate }: FooterProps) => {
                     {type === 'home' && 'Professioneller DJ-Service'}
                   </div>
                 </div>
-              </button>
+              </Link>
               <p className="text-gray-600 mb-8 leading-relaxed max-w-md">
                 Über 20 Jahre Erfahrung für unvergessliche Events. Professionell, zuverlässig und mit Leidenschaft für gute Musik.
               </p>
@@ -75,18 +73,18 @@ const Footer = ({ type, onNavigate }: FooterProps) => {
               <h3 className="text-lg font-semibold mb-6 text-gray-900">Navigation</h3>
               <ul className="space-y-4">
                 {[
-                  { label: 'Startseite', page: 'home' as const },
-                  { label: 'Hochzeits-DJ', page: 'wedding' as const },
-                  { label: 'Party-DJ', page: 'party' as const }
+                  { label: 'Startseite', path: '/' },
+                  { label: 'Hochzeits-DJ', path: '/hochzeit' },
+                  { label: 'Party-DJ', path: '/party' }
                 ].map((item) => (
-                  <li key={item.page}>
-                    <button
-                      onClick={() => onNavigate(item.page)}
+                  <li key={item.path}>
+                    <Link
+                      to={item.path}
                       className="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 group"
                     >
                       <span>{item.label}</span>
                       <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                    </button>
+                    </Link>
                   </li>
                 ))}
                 <li>

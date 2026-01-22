@@ -1,24 +1,31 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import WeddingPage from './pages/WeddingPage';
 import PartyPage from './pages/PartyPage';
 
-type PageType = 'home' | 'wedding' | 'party';
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<PageType>('home');
-
-  const navigateTo = (page: PageType) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  };
-
   return (
-    <div className="min-h-screen">
-      {currentPage === 'home' && <HomePage onNavigate={navigateTo} />}
-      {currentPage === 'wedding' && <WeddingPage onNavigate={navigateTo} />}
-      {currentPage === 'party' && <PartyPage onNavigate={navigateTo} />}
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/hochzeit" element={<WeddingPage />} />
+          <Route path="/party" element={<PartyPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

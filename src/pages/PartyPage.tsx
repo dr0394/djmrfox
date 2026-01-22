@@ -9,10 +9,6 @@ import MultiStepForm from '../components/MultiStepForm';
 import WhatsAppButton from '../components/WhatsAppButton';
 import CookieBanner from '../components/CookieBanner';
 
-interface PartyPageProps {
-  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
-}
-
 const accentColor = '#FF6B00';
 const accentColorLight = '#FF8C33';
 const accentColorDark = '#E05A00';
@@ -153,7 +149,7 @@ const partyGalleryItems: GalleryItem[] = [
   }
 ];
 
-const PartyPage = ({ onNavigate }: PartyPageProps) => {
+const PartyPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -255,7 +251,7 @@ const PartyPage = ({ onNavigate }: PartyPageProps) => {
         </div>
 
         <div className="relative z-10">
-          <Navigation currentPage="party" onNavigate={onNavigate} variant="dark" />
+          <Navigation />
 
           <div className="min-h-screen flex items-center overflow-hidden">
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
@@ -811,7 +807,7 @@ const PartyPage = ({ onNavigate }: PartyPageProps) => {
 
         <ContactSection type="party" variant="light" accentColor={accentColor} />
 
-        <Footer type="party" onNavigate={onNavigate} variant="light" />
+        <Footer />
 
         {lightboxOpen && (
           <div

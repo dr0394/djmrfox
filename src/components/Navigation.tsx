@@ -1,15 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Music2 } from 'lucide-react';
 
-interface NavigationProps {
-  currentPage: 'home' | 'wedding' | 'party';
-  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
-  variant?: 'light' | 'dark';
-}
-
-const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +16,9 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
   }, []);
 
   const navItems = [
-    { key: 'home', label: 'Start' },
-    { key: 'wedding', label: 'Hochzeit' },
-    { key: 'party', label: 'Party' }
+    { path: '/', label: 'Start' },
+    { path: '/hochzeit', label: 'Hochzeit' },
+    { path: '/party', label: 'Party' }
   ];
 
   const scrollToContact = () => {
@@ -41,8 +37,8 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <button
-            onClick={() => onNavigate('home')}
+          <Link
+            to="/"
             className="group flex items-center gap-3 hover:opacity-90 transition-all"
           >
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
@@ -52,17 +48,17 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
               <div className="text-xl font-bold tracking-tight text-gray-900">DJ Mr. Fox</div>
               <div className="text-xs text-gray-600 tracking-wide">Professional DJ Service</div>
             </div>
-          </button>
+          </Link>
 
           <div className="hidden md:flex items-center gap-2">
             <div className="flex items-center gap-1 bg-gray-100 rounded-full p-1.5">
               {navItems.map((item) => {
-                const isActive = currentPage === item.key;
+                const isActive = location.pathname === item.path;
 
                 return (
-                  <button
-                    key={item.key}
-                    onClick={() => onNavigate(item.key as 'home' | 'wedding' | 'party')}
+                  <Link
+                    key={item.path}
+                    to={item.path}
                     className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       isActive
                         ? 'bg-white text-gray-900 shadow-md'
@@ -70,7 +66,7 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
                     }`}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 );
               })}
             </div>
@@ -94,20 +90,18 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
       <div className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-80' : 'max-h-0'}`}>
         <div className="bg-white/95 backdrop-blur-xl border-t border-gray-200 px-4 py-4 space-y-2">
           {navItems.map((item) => (
-            <button
-              key={item.key}
-              onClick={() => {
-                onNavigate(item.key as 'home' | 'wedding' | 'party');
-                setIsOpen(false);
-              }}
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setIsOpen(false)}
               className={`block w-full text-left px-4 py-3 rounded-xl transition-all text-sm font-medium ${
-                currentPage === item.key
+                location.pathname === item.path
                   ? 'bg-gray-100 text-gray-900'
                   : 'text-gray-600 hover:bg-gray-50'
               }`}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
           <button
             onClick={scrollToContact}

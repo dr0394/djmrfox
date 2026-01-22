@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Music2, Heart, PartyPopper, CheckCircle, ArrowRight, Play } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -11,11 +12,8 @@ import CookieBanner from '../components/CookieBanner';
 import GoogleReviews from '../components/GoogleReviews';
 import ParallaxSection from '../components/ParallaxSection';
 
-interface HomePageProps {
-  onNavigate: (page: 'home' | 'wedding' | 'party') => void;
-}
-
-const HomePage = ({ onNavigate }: HomePageProps) => {
+const HomePage = () => {
+  const navigate = useNavigate();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const homeFaqs = [
     {
@@ -42,7 +40,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
 
   return (
     <div className="relative bg-white overflow-x-hidden">
-      <Navigation currentPage="home" onNavigate={onNavigate} variant="light" />
+      <Navigation />
 
       <section className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-gray-50 via-white to-cyan-50">
         <div className="absolute inset-0 opacity-30">
@@ -326,7 +324,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <div
-              onClick={() => onNavigate('wedding')}
+              onClick={() => navigate('/hochzeit')}
               className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[3/4] md:aspect-auto md:h-[550px] border border-gray-200 shadow-lg hover:shadow-2xl transition-all"
             >
               <img
@@ -351,7 +349,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
             </div>
 
             <div
-              onClick={() => onNavigate('party')}
+              onClick={() => navigate('/party')}
               className="group relative rounded-3xl overflow-hidden cursor-pointer aspect-[3/4] md:aspect-auto md:h-[550px] border border-gray-200 shadow-lg hover:shadow-2xl transition-all"
             >
               <img
@@ -569,7 +567,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
 
       <ContactSection type="home" variant="light" />
 
-      <Footer type="home" onNavigate={onNavigate} variant="light" />
+      <Footer />
 
       <MultiStepForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} initialEventType="general" />
       <WhatsAppButton />
