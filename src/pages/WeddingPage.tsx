@@ -384,7 +384,6 @@ const WeddingPage = () => {
                   'Musikwunschzettel vor Ort',
                   'Funkmikrofon für Reden',
                   'Kinderlieder auf Wunsch',
-                  'Keine Spielpausen',
                   'Persönliches Vorgespräch'
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
