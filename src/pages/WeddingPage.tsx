@@ -61,7 +61,7 @@ const WeddingPage = () => {
     },
     {
       question: "Wie viel Platz und welche technischen Voraussetzungen benötigen Sie?",
-      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 45-60 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
+      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 90 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
     },
     {
       question: "Können wir unsere Musikwünsche mitteilen?",
