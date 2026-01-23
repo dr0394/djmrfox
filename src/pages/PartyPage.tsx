@@ -550,7 +550,7 @@ const PartyPage = () => {
                   'Funkmikrofon für Ansagen',
                   'Moderation auf Wunsch',
                   'Kinderlieder auf Wunsch',
-                  'Keine Spielpausen',
+                  'Spielpausen auf Wunsch',
                   'Persönliches Vorgespräch'
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
