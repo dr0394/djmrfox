@@ -383,7 +383,6 @@ const WeddingPage = () => {
                   'Musikwunschbogen vorab',
                   'Musikwunschzettel vor Ort',
                   'Funkmikrofon für Reden',
-                  'Rednerpult (optional)',
                   'Kinderlieder auf Wunsch',
                   'Keine Spielpausen',
                   'Persönliches Vorgespräch'
