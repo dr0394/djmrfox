@@ -763,7 +763,7 @@ const PartyPage = () => {
                   },
                   {
                     title: 'Musikservice',
-                    items: ['Keine Spielpausen', 'Musikwunschbogen & -zettel', 'Eigene CDs willkommen', 'Riesiges Musikarchiv', 'Kinderlieder auf Wunsch']
+                    items: ['Spielpausen auf Wunsch', 'Musikwunschbogen & -zettel', 'Eigene CDs willkommen', 'Riesiges Musikarchiv', 'Kinderlieder auf Wunsch']
                   },
                   {
                     title: 'Moderation',
