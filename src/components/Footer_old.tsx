@@ -18,7 +18,7 @@ const Footer = ({ type, onNavigate, variant = 'light' }: FooterProps) => {
 
   const accentColor = getAccentColor();
   const email = type === 'wedding' ? 'info@ihrhochzeits-dj.com' : type === 'party' ? 'info@ihr-party-dj.com' : 'info@dj-mrfox.com';
-  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen';
+  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen' : 'Dorfstraße 35a, 13597 Berlin';
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">

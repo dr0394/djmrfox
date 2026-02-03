@@ -17,53 +17,23 @@ const WeddingPage = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const weddingTestimonials = [
     {
-      text: "Stefan, wir danken dir für unsere wundervolle Hochzeitsfeier! Nach anfänglichen Schwierigkeiten haben wir einen Musikabend erleben dürfen, den wir nicht so schnell vergessen. Ich habe Menschen tanzen sehen, bei denen ich es NIEMALS für ansatzweise möglich gehalten hätte - alle voll des Lobes für deine Musikauswahl.",
-      author: "Svenja & Tobi",
+      text: "Die Musikauswahl war perfekt auf unsere Gäste zugeschnitten und die Tanzfläche war immer voll. Wir hätten uns keinen besseren DJ wünschen können!",
+      author: "Sandra & Michael",
+      event: "Hochzeit in Potsdam"
+    },
+    {
+      text: "Er hat alle unsere Wünsche erfüllt und sogar die, die wir gar nicht aufgeschrieben hatten. Die Stimmung war den ganzen Abend fantastisch!",
+      author: "Julia & Thomas",
       event: "Hochzeit"
     },
     {
-      text: "Vielen vielen Dank nochmal für den gelungenen Abend! Es hat alles so gut geklappt, es war wirklich unser schönster Tag. Die Musikwünsche erfüllt, alles in einer super Zusammenstellung. Das hat alles gepasst! Es war ein traumhafter Abend!",
-      author: "Mandy & Denis",
+      text: "Unsere Feier hat bis morgens um 6 Uhr gedauert, es war großartig! Alle Gäste waren begeistert und die Tanzfläche war nie leer.",
+      author: "Elisabeth & Martin",
       event: "Hochzeit"
     },
     {
-      text: "Die Party war einfach Spitze, auch dank deiner Musik. Als Moderator auch ein Topmann. Junge hast du die Versteigerung des Strumpfbandes gerockt! Wir werden dich beim nächsten Anlass auf jeden Fall wieder buchen.",
-      author: "Lysanna & Marcel",
-      event: "Hochzeit"
-    },
-    {
-      text: "Wir können dich nur weiterempfehlen. Die Vorbereitung war sehr angenehm und unkompliziert. Und wir hatten einen tollen Abend! Das Eingehen auf die verschiedenen Menschen und Musikrichtungen hat sehr gut funktioniert. Alles in Allem SUPER!!!",
-      author: "Janina & Stefan",
-      event: "Hochzeit"
-    },
-    {
-      text: "Sie haben unsere Hochzeit zu einem wundervollen Tag gemacht. Wir hatten eine tolle Party und Sie haben bei all unseren Gästen und auch dem Chef des Hotels einen riesigen Eindruck hinterlassen. Danke auch für Ihre Flexibilität bei der Erfüllung all der vielen Musikwünsche.",
-      author: "Nicole & Mike",
-      event: "Hochzeit"
-    },
-    {
-      text: "Die Musikauswahl bei der Hochzeit war dann klasse, die Übergänge grandios und deine Moderationen super! Besonders klasse war, dass wirklich alle getanzt haben und immer für jeden etwas dabei war. Als wir alle zusammen im Kreis zu russischen und griechischen Klängen tanzten, war ich überglücklich.",
-      author: "Sarah & Christoph",
-      event: "Hochzeit"
-    },
-    {
-      text: "Vielen Dank für die wunderbare musikalische Gestaltung von unserem Polterabend und unserer Hochzeit! Wir haben gefeiert bis morgens um 6:00 Uhr, es war großartig! Du hast dich auf all unsere Wünsche eingelassen, die Musik zum Essen war toll und später kamen unsere Lieder und die Wünsche der Gäste, alle haben getanzt.",
-      author: "Elisabeth",
-      event: "Hochzeit & Polterabend"
-    },
-    {
-      text: "Vielen Dank für die tolle musikalische Begleitung unseres ganzen Hochzeitstages! Es hat viel Spaß gemacht und für uns war es perfekt!",
-      author: "Dana & Daniel",
-      event: "Hochzeit"
-    },
-    {
-      text: "Wir hatten eine tolle Party und haben getanzt, bis die Sonne wieder aufging; genau, wie wir uns das gewünscht hatten. Herzlichen Dank für Ihre Ausdauer bis morgens um 5:30 Uhr und die Flexibilität bei den Musikwünschen der Gäste!",
-      author: "Sabine & Philipp",
-      event: "Hochzeit"
-    },
-    {
-      text: "Du hast uns bei einer vorherigen Hochzeit überzeugt und auch bei unserer Feier haben wir mit Dir die richtige Wahl getroffen: super Organisation, keine offene Fragen und Musik, wie wir und unsere Gäste sie sich gewünscht haben! Ein ganz besonderes Dankeschön für den Schnitt unseres Hochzeitssongs. Grandiose Party - 100% zufrieden!",
-      author: "Julia & Karsten",
+      text: "Von der ersten Kontaktaufnahme bis zum letzten Tanz war alles perfekt organisiert. Die Moderation war charmant und die Musik einfach top!",
+      author: "Sarah & Daniel",
       event: "Hochzeit"
     }
   ];
@@ -91,7 +61,7 @@ const WeddingPage = () => {
     },
     {
       question: "Wie viel Platz und welche technischen Voraussetzungen benötigen Sie?",
-      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 90 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
+      answer: "Ich benötige etwa 2×2 Meter Platz für den DJ-Stand und einen normalen Stromanschluss (230V). Die komplette Licht- und Tontechnik bringe ich mit. Der Aufbau dauert etwa 45-60 Minuten, daher reise ich ca. 90 Minuten vor Beginn an."
     },
     {
       question: "Können wir unsere Musikwünsche mitteilen?",
@@ -113,90 +83,122 @@ const WeddingPage = () => {
 
   return (
     <div className="relative bg-white">
-      <section className="relative min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-white">
-        <Navigation />
+      <section className="relative min-h-screen">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://i.imgur.com/PW5BLgA.jpeg"
+            alt="Hochzeit"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+        </div>
 
-        <div className="min-h-[calc(100vh-5rem)] flex items-center overflow-hidden pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative order-2 lg:order-1">
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://i.imgur.com/PW5BLgA.jpeg"
-                    alt="Hochzeit"
-                    className="w-full h-full object-cover"
-                  />
+        <div className="relative z-10">
+          <Navigation />
+
+          <div className="min-h-screen flex items-center overflow-hidden">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3 mb-10">
+              <svg viewBox="0 0 24 24" className="w-6 h-6 flex-shrink-0">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
+                <span className="text-white text-sm font-normal">5.0 auf Google</span>
               </div>
+            </div>
 
-              <div className="order-1 lg:order-2">
-                <div className="inline-flex items-center gap-3 bg-white border border-gray-200 rounded-full px-5 py-3 mb-10 shadow-sm">
-                  <svg viewBox="0 0 24 24" className="w-6 h-6 flex-shrink-0">
-                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                  </svg>
-                  <div className="flex items-center gap-2">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <span className="text-gray-900 text-sm font-normal">5.0 auf Google</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[0.95] tracking-tight">
+              Euer Tag.{' '}
+              <span className="relative">
+                <span className="relative z-10" style={{ color: accentColorLight }}>
+                  Unvergesslich.
+                </span>
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl font-light">
+              Ich bin <strong className="text-white font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass eure Gäste
+              <span className="text-white font-semibold"> bis zum Morgengrauen tanzen</span>.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-medium transition-all shadow-2xl hover:shadow-xl"
+                style={{ backgroundColor: accentColor }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
+              >
+                Jetzt Anfrage senden
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button
+                onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-white/50 text-white rounded-xl text-xl font-medium hover:bg-white/10 transition-all"
+              >
+                <Play className="w-6 h-6 text-white" />
+                Mehr erfahren
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 max-w-xl">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">200+</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Hochzeiten</div>
+              </div>
+              <div className="text-center border-l border-r border-white/30">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">20+</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Jahre</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-semibold text-white mb-1">5.0</div>
+                <div className="text-white/70 text-sm uppercase tracking-wider font-light">Bewertung</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:block relative">
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-40" style={{ backgroundColor: accentColor }}></div>
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl">
+                <img
+                  src="https://i.imgur.com/CCjPfbc.jpeg"
+                  alt="DJ Mr. Fox bei einer Hochzeit"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 via-transparent to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: accentColor }}>
+                    <Heart className="w-6 h-6 text-white" />
                   </div>
-                </div>
-
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-900 mb-8 leading-[0.95] tracking-tight">
-                  Euer Tag.{' '}
-                  <span className="relative">
-                    <span className="relative z-10" style={{ color: accentColor }}>
-                      Unvergesslich.
-                    </span>
-                  </span>
-                </h1>
-
-                <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl font-light">
-                  Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass eure Gäste
-                  <span className="text-gray-900 font-semibold"> bis zum Morgengrauen tanzen</span>.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                  <button
-                    onClick={() => setIsFormOpen(true)}
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-6 text-white rounded-xl text-xl font-medium transition-all shadow-lg hover:shadow-xl"
-                    style={{ backgroundColor: accentColor }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = accentColorDark}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = accentColor}
-                  >
-                    Jetzt Anfrage senden
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button
-                    onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-gray-300 text-gray-900 rounded-xl text-xl font-medium hover:bg-gray-50 transition-all"
-                  >
-                    <Play className="w-6 h-6 text-gray-900" />
-                    Mehr erfahren
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-3 gap-8 max-w-xl">
-                  <div className="text-center">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">200+</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Hochzeiten</div>
-                  </div>
-                  <div className="text-center border-l border-r border-gray-300">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">20+</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Jahre</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">5.0</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Bewertung</div>
+                  <div>
+                    <div className="text-gray-900 font-medium">Ihr Hochzeits-DJ</div>
+                    <div className="text-gray-500 text-sm">Mit Herz & Erfahrung</div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+          <div className="w-8 h-14 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+            <div className="w-2 h-3 rounded-full animate-pulse" style={{ backgroundColor: accentColorLight }}></div>
           </div>
         </div>
       </section>
@@ -291,7 +293,7 @@ const WeddingPage = () => {
                 Neugierig auf meinen Stil?
               </h3>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 font-light">
-                Ich erstelle euch einen kurzen <strong className="font-semibold" style={{ color: accentColorLight }}>4-Titel-Mix in einem Genre Eurer Wahl</strong>, der zeigt, wie sich euer Abend anfühlen könnte.
+                Ich erstelle euch einen kurzen <strong className="font-semibold" style={{ color: accentColorLight }}>3-Song-Mix</strong>, der zeigt, wie sich euer Abend anfühlen könnte.
               </p>
 
               <div className="space-y-6 text-lg md:text-xl text-white/80 mb-10 font-light">
@@ -381,7 +383,9 @@ const WeddingPage = () => {
                   'Musikwunschbogen vorab',
                   'Musikwunschzettel vor Ort',
                   'Funkmikrofon für Reden',
+                  'Rednerpult (optional)',
                   'Kinderlieder auf Wunsch',
+                  'Keine Spielpausen',
                   'Persönliches Vorgespräch'
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
