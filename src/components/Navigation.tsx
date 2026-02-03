@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Music2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,13 +41,11 @@ const Navigation = () => {
             to="/"
             className="group flex items-center gap-3 hover:opacity-90 transition-all"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
-              <Music2 className="w-7 h-7 text-white" />
-            </div>
-            <div className="text-left hidden sm:block">
-              <div className="text-xl font-bold tracking-tight text-gray-900">DJ Mr. Fox</div>
-              <div className="text-xs text-gray-600 tracking-wide">Professional DJ Service</div>
-            </div>
+            <img
+              src="https://i.imgur.com/oy98MmI.png"
+              alt="DJ Mr. Fox Logo"
+              className="h-16 w-auto object-contain"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-2">

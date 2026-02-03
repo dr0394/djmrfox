@@ -1,4 +1,4 @@
-import { Music2, Mail, Phone, MapPin, Heart, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Heart, ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -32,20 +32,11 @@ const Footer = () => {
                 to="/"
                 className="flex items-center gap-4 mb-6 hover:opacity-80 transition-opacity"
               >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
-                  style={{ backgroundColor: accentColor }}
-                >
-                  <Music2 className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-gray-900">DJ Mr. Fox</div>
-                  <div className="text-gray-600 text-sm">
-                    {type === 'wedding' && 'Ihr Hochzeits-DJ'}
-                    {type === 'party' && 'Ihr Party-DJ'}
-                    {type === 'home' && 'Professioneller DJ-Service'}
-                  </div>
-                </div>
+                <img
+                  src="https://i.imgur.com/oy98MmI.png"
+                  alt="DJ Mr. Fox Logo"
+                  className="h-20 w-auto object-contain"
+                />
               </Link>
               <p className="text-gray-600 mb-8 leading-relaxed max-w-md">
                 Über 20 Jahre Erfahrung für unvergessliche Events. Professionell, zuverlässig und mit Leidenschaft für gute Musik.
