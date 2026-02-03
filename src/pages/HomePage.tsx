@@ -90,7 +90,7 @@ const HomePage = () => {
                   <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur-2xl animate-pulse"></div>
                   <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-cyan-500/20">
                     <img
-                      src="https://i.imgur.com/RRjxyv1.jpeg"
+                      src="https://i.imgur.com/tPiandQ.jpeg"
                       alt="DJ Mr. Fox"
                       className="w-full h-full object-cover"
                     />

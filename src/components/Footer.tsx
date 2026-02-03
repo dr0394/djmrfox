@@ -20,7 +20,7 @@ const Footer = () => {
 
   const accentColor = getAccentColor();
   const email = type === 'wedding' ? 'info@ihrhochzeits-dj.com' : type === 'party' ? 'info@ihr-party-dj.com' : 'info@dj-mrfox.com';
-  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen' : 'Dorfstraße 35a, 13597 Berlin';
+  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen' : 'Am Busch 11, 15806 Zossen';
 
   return (
     <>
@@ -179,7 +179,7 @@ const Footer = () => {
             <div className="space-y-6 text-gray-700">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Angaben gemäß § 5 TMG</h3>
-                <p>Stefan Fuchs</p>
+                <p>Stefan Zetzsche</p>
                 <p>DJ Mr. Fox</p>
                 <p>{address}</p>
               </div>
@@ -191,14 +191,13 @@ const Footer = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Umsatzsteuer-ID</h3>
-                <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:</p>
-                <p className="text-gray-600 italic">Wird nachgereicht</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Steuernummer</h3>
+                <p>FA Luckenwalde 050/292/07390</p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-                <p>Stefan Fuchs</p>
+                <p>Stefan Zetzsche</p>
                 <p>{address}</p>
               </div>
 
