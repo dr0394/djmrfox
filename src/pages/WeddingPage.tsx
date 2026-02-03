@@ -555,12 +555,15 @@ const WeddingPage = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg?auto=compress&cs=tinysrgb&w=600',
-                'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600'
+                'https://i.imgur.com/MiSynkm.jpeg',
+                'https://i.imgur.com/q8ti509.jpeg',
+                'https://i.imgur.com/9V8y01m.jpeg',
+                'https://i.imgur.com/Xnja1KE.jpeg',
+                'https://i.imgur.com/9OUHdZ3.jpeg',
+                'https://i.imgur.com/D4pZwBs.jpeg',
+                'https://i.imgur.com/ZuUD490.jpeg',
+                'https://i.imgur.com/ej3WAAS.jpeg',
+                'https://i.imgur.com/Jp8JCWs.jpeg'
               ].map((img, index) => (
                 <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
                   <img src={img} alt={`Hochzeit ${index + 1}`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
