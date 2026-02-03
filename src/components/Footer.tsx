@@ -20,7 +20,7 @@ const Footer = () => {
 
   const accentColor = getAccentColor();
   const email = type === 'wedding' ? 'info@ihrhochzeits-dj.com' : type === 'party' ? 'info@ihr-party-dj.com' : 'info@dj-mrfox.com';
-  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen' : 'Dorfstraße 35a, 13597 Berlin';
+  const address = type === 'wedding' ? 'Am Busch 11, 15806 Zossen' : 'Am Busch 11, 15806 Zossen';
 
   return (
     <>
