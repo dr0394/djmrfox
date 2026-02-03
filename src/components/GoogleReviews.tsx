@@ -13,40 +13,40 @@ interface GoogleReviewsProps {
 
 const reviews: Review[] = [
   {
-    author: "Sarah Weber",
+    author: "Thomas",
     rating: 5,
-    text: "Absolut empfehlenswert! Stefan hat unsere Hochzeit zu einem unvergesslichen Erlebnis gemacht. Die Tanzfläche war die ganze Nacht voll und die Musikauswahl perfekt auf unsere Gäste abgestimmt.",
-    date: "vor 2 Wochen"
+    text: "Ich habe den DJ Mr. Fox nun schon mehrfach erlebt. Er versteht es immer wieder neu, auch gemischtes Publikum mit einer perfekt abgestimmten Musikauswahl zu begeistern. Sein Gespür für die Wünsche der Gäste ist einzigartig. Meine Gäste sagen oft, dass sie lange nicht mehr so viel und ausgelassen getanzt haben.",
+    date: "Veranstalter"
   },
   {
-    author: "Michael Krüger",
+    author: "Britta",
     rating: 5,
-    text: "Professionell, zuverlässig und musikalisch top! Bei unserem Firmenevent hat DJ Mr. Fox alle Generationen begeistert. Sehr zu empfehlen!",
-    date: "vor 1 Monat"
+    text: "Hab vielen Dank für die tolle Musik auf meiner Geburtstagsfeier. Ich hatte aufgrund der Empfehlung ja mit einigem gerechnet, aber dass wir bis um vier durchgehalten haben, hätte ich echt nicht erwartet; großes Kompliment an Dich! Wir buchen Dich auf jeden Fall wieder.",
+    date: "Geburtstagsfeier"
   },
   {
-    author: "Julia Schmidt",
+    author: "Stefanie",
     rating: 5,
-    text: "Die beste Entscheidung für unseren 50. Geburtstag! Stefan hat ein unglaubliches Gespür für die richtige Musik zum richtigen Zeitpunkt. Alle Gäste waren begeistert.",
-    date: "vor 3 Wochen"
+    text: "Du hast meinen gefürchteten 30. Geburtstag zu einem großartigen Event werden lassen. Ich selbst bin aus dem Tanzen gar nicht mehr heraus gekommen und auch meinen Gästen hast du ordentlich eingeheizt. Vielen lieben Dank dafür und gern immer wieder.",
+    date: "30. Geburtstag"
   },
   {
-    author: "Andreas Hoffmann",
+    author: "Harald",
     rating: 5,
-    text: "Von der ersten Absprache bis zum letzten Song - alles perfekt! Die Technik war erstklassig und die Musikauswahl hat jeden auf die Tanzfläche gebracht.",
-    date: "vor 1 Woche"
+    text: "Vielen Dank für die professionelle Beschallung unserer Auftaktveranstaltung des BKC - BusinessKontakteClub in Berlin.",
+    date: "Firmenveranstaltung"
   },
   {
-    author: "Lisa Becker",
+    author: "Kerstin",
     rating: 5,
-    text: "Unsere Hochzeit war ein Traum! Stefan hat mit seiner Musik genau die richtige Atmosphäre geschaffen. Wir und unsere Gäste werden diesen Tag nie vergessen.",
-    date: "vor 2 Monaten"
+    text: "Ein herzliches Dankeschön für die immer passende musikalische Begleitung unserer Party! Besonders toll, dass im Vorfeld auf der Online-Wunschliste der Musikwunsch und die Unterstützung als Moderator eingegrenzt werden konnten. All das wurde 1A umgesetzt. Unsere Feier war auf jeden Fall auch dadurch ein voller Erfolg!",
+    date: "Party"
   },
   {
-    author: "Thomas Richter",
+    author: "Wendy",
     rating: 5,
-    text: "Absolute Empfehlung! Professionell, sympathisch und musikalisch einfach nur Weltklasse. Die Party ging bis 6 Uhr morgens - niemand wollte gehen!",
-    date: "vor 3 Wochen"
+    text: "Großes Lob und vielen Dank für die hervorragende musikalische Umrahmung unserer Weihnachtsfeier in Potsdam. Alle waren begeistert. Du hast einen super Job gemacht. Mach weiter so, wir wünschen dir immer eine gute Auftragslage und weiterhin viele zufriedene Kunden.",
+    date: "Weihnachtsfeier"
   }
 ];
 

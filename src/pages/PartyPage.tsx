@@ -190,16 +190,6 @@ const PartyPage = () => {
       event: "Geburtstagsfeier"
     },
     {
-      text: "Wir wollten Dir nochmal DANKE sagen für die super Musik auf unserer Silberhochzeit! Wir hatten von Anfang an das Gefühl, dass es Dir wirklich wichtig war, unseren Abend so schön wie möglich zu gestalten. Du hast alle unsere Musikwünsche erfüllt und auch die, die wir gar nicht aufgeschrieben hatten…",
-      author: "Sabine & Joachim",
-      event: "Silberhochzeit"
-    },
-    {
-      text: "Vielen Dank für die wunderbare musikalische Gestaltung von unserem Polterabend und unserer Hochzeit! Unser Polterabend war eine gelungene Party, die Tanzfläche war immer voll und wir haben richtig gut gefeiert! Die Hochzeit hat dann nochmal alles übertroffen. Wir haben gefeiert bis morgens um 6:00 Uhr, es war großartig!",
-      author: "Elisabeth",
-      event: "Polterabend & Hochzeit"
-    },
-    {
       text: "Du hast meinen gefürchteten 30. Geburtstag zu einem großartigen Event werden lassen. Ich selbst bin aus dem Tanzen gar nicht mehr heraus gekommen und auch meinen Gästen hast du ordentlich eingeheizt. Vielen lieben Dank dafür und gern immer wieder.",
       author: "Stefanie",
       event: "30. Geburtstag"
@@ -208,16 +198,6 @@ const PartyPage = () => {
       text: "Vielen Dank für die professionelle Beschallung unserer Auftaktveranstaltung des BKC - BusinessKontakteClub in Berlin.",
       author: "Harald",
       event: "Firmenveranstaltung"
-    },
-    {
-      text: "Vielen, vielen Dank für die musikalische Umrahmung zu unserer Silbernen Hochzeit. Ihre Musikauswahl war super und sorgte für eine gute Stimmung. Sehr gut sind bei unseren Gästen auch die Musikwunschzettel angekommen. Tolle Idee. Alles Gute!",
-      author: "Uwe",
-      event: "Silberne Hochzeit"
-    },
-    {
-      text: "Ein ganz herzliches Dankeschön für die musikalische Umrahmung zu unserer Silberhochzeit. Wir hätten keinen besseren DJ finden können (ich arbeitete in der Gastronomie und habe schon viele DJs gehört). Immer wieder gern.",
-      author: "Meik",
-      event: "Silberhochzeit"
     },
     {
       text: "Ein herzliches Dankeschön für die immer passende musikalische Begleitung unserer Party! Besonders toll, dass im Vorfeld auf der Online-Wunschliste der Musikwunsch und die Unterstützung als Moderator eingegrenzt werden konnten. All das wurde 1A umgesetzt. Unsere Feier war auf jeden Fall auch dadurch ein voller Erfolg!",
