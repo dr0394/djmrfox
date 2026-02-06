@@ -232,7 +232,7 @@ const WeddingPage = () => {
                     Ich durfte schon so viele Paare an ihrem schonsten Tag begleiten – und jede Hochzeit war anders. Jede hatte ihre eigene Geschichte, ihre eigene Stimmung, ihren eigenen Magic Moment.
                   </p>
                   <p>
-                    Von romantischen Schlosshochzeiten uber entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, euch zu verstehen, eure Gaste zu lesen und den richtigen Ton zu treffen.
+                    Von romantischen Schlosshochzeiten uber entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, euch zu verstehen, eure Gäste zu lesen und den richtigen Ton zu treffen.
                   </p>
                   <p>
                     Der erste Tanz, der Moment wenn Oma mit Enkel tanzt, die wilden Partyphase um Mitternacht – ich kenne all diese Momente und weiß genau, welche Musik sie perfekt macht.
