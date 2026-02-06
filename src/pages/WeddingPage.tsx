@@ -368,7 +368,7 @@ const WeddingPage = () => {
                 },
                 {
                   icon: Music,
-                  title: 'Eroffnungstanz',
+                  title: 'Eröffnungstanz',
                   description: 'Beratung zur Songauswahl und professionelle Ansage Ihres ersten Tanzes als Ehepaar'
                 },
                 {
