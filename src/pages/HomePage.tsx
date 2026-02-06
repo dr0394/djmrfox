@@ -83,22 +83,22 @@ const HomePage = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Ihr Event.{' '}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-blue-600">
+                  <span className="relative z-10 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] bg-clip-text text-transparent">
                     Unvergesslich.
                   </span>
-                  <span className="absolute bottom-2 left-0 w-full h-3 bg-blue-400/30 -rotate-1"></span>
+                  <span className="absolute bottom-2 left-0 w-full h-3 bg-[#2ACFFD]/30 -rotate-1"></span>
                 </span>
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass Ihre Gäste
-                <span className="text-blue-600 font-semibold"> bis 6 Uhr morgens tanzen</span>.
+                <span className="text-[#027BC8] font-semibold"> bis 6 Uhr morgens tanzen</span>.
               </p>
 
               <div className="lg:hidden mb-8">
                 <div className="relative max-w-xs mx-auto">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/30 via-blue-600/30 to-blue-700/30 rounded-3xl blur-2xl animate-pulse"></div>
-                  <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-blue-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-[#027BC8]/30 via-[#2ACFFD]/30 to-[#027BC8]/30 rounded-3xl blur-2xl animate-pulse"></div>
+                  <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-[#027BC8]/20">
                     <img
                       src="https://i.imgur.com/tPiandQ.jpeg"
                       alt="DJ Mr. Fox"
@@ -112,14 +112,14 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start">
                 <button
                   onClick={() => setIsFormOpen(true)}
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-blue-600 text-white rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:opacity-90 transition-all shadow-lg shadow-[#027BC8]/20"
                 >
                   Jetzt Anfrage senden
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={() => document.getElementById('meine-geschichte')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-blue-600 text-blue-700 rounded-xl text-lg font-medium hover:bg-blue-50 transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-[#027BC8] text-[#027BC8] rounded-xl text-lg font-medium hover:bg-[#027BC8]/5 transition-all"
                 >
                   <Play className="w-5 h-5" />
                   Mehr erfahren
@@ -128,19 +128,19 @@ const HomePage = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0">
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#027BC8] flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Volle Tanzfläche garantiert</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#027BC8] flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Musik für alle Generationen</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#027BC8] flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Profi-Equipment inklusive</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#027BC8] flex-shrink-0" />
                   <span className="text-gray-700 text-sm">20+ Jahre Erfahrung</span>
                 </div>
               </div>
@@ -148,8 +148,8 @@ const HomePage = () => {
 
             <div className="hidden lg:block relative order-2 lg:order-2">
               <div className="relative max-w-sm mx-auto">
-                <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/30 via-blue-600/30 to-blue-700/30 rounded-3xl blur-2xl animate-pulse"></div>
-                <div className="relative aspect-[2/3] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-blue-500/20">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#027BC8]/30 via-[#2ACFFD]/30 to-[#027BC8]/30 rounded-3xl blur-2xl animate-pulse"></div>
+                <div className="relative aspect-[2/3] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-[#027BC8]/20">
                   <img
                     src="https://i.imgur.com/RRjxyv1.jpeg"
                     alt="DJ Mr. Fox"
@@ -159,7 +159,7 @@ const HomePage = () => {
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-2xl">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#027BC8] to-[#2ACFFD] rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -200,13 +200,13 @@ const HomePage = () => {
       <section id="meine-geschichte" className="py-20 md:py-28 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Die Lösung</span>
+            <div className="inline-flex items-center gap-2 bg-[#027BC8]/10 border border-[#027BC8]/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-[#027BC8] rounded-full"></div>
+              <span className="text-[#027BC8] text-sm font-semibold uppercase tracking-wider">Die Lösung</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Ein DJ, der Ihre{' '}
-              <span className="text-blue-600">Gäste versteht</span>
+              <span className="bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] bg-clip-text text-transparent">Gäste versteht</span>
             </h2>
           </div>
 
@@ -247,10 +247,10 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-blue-500 to-blue-500 text-white px-8 py-5 rounded-2xl shadow-2xl shadow-blue-500/30 border border-blue-400/30 z-10">
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#027BC8] to-[#2ACFFD] text-white px-8 py-5 rounded-2xl shadow-2xl shadow-[#027BC8]/30 border border-[#2ACFFD]/30 z-10">
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold mb-1">20+</div>
-                  <div className="text-blue-100 text-sm">Jahre Erfahrung</div>
+                  <div className="text-[#2ACFFD]/70 text-sm">Jahre Erfahrung</div>
                 </div>
               </div>
             </div>
@@ -265,7 +265,7 @@ const HomePage = () => {
                   Ich lese die Stimmung. Ich spüre, wann der richtige Moment für den nächsten Hit ist.
                   Und ich weiß genau, welcher Song bei welcher Gästegruppe funktioniert.
                 </p>
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-xl">
+                <div className="bg-[#027BC8]/10 border-l-4 border-[#027BC8] p-6 rounded-xl">
                   <p className="text-gray-900 font-medium italic">
                     "Der perfekte Moment entsteht nicht durch Zufall – sondern durch Erfahrung, Gespür und die richtige Musik zur richtigen Zeit."
                   </p>
@@ -274,7 +274,7 @@ const HomePage = () => {
 
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
+                className="group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
               >
                 Unverbindlich anfragen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -289,8 +289,8 @@ const HomePage = () => {
               { icon: Music2, title: 'Profi-Technik', desc: 'Komplett inklusive' },
               { icon: Music2, title: 'Non-Stop-Musik', desc: 'Keine Pausen' }
             ].map((item, i) => (
-              <div key={i} className="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-blue-400 hover:bg-blue-50/50 transition-all shadow-sm">
-                <item.icon className="w-8 sm:w-10 h-8 sm:h-10 text-blue-600 mb-4 group-hover:scale-110 transition-transform" />
+              <div key={i} className="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#2ACFFD] hover:bg-[#027BC8]/5 transition-all shadow-sm">
+                <item.icon className="w-8 sm:w-10 h-8 sm:h-10 text-[#027BC8] mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
                 <p className="text-gray-600 text-xs sm:text-sm">{item.desc}</p>
               </div>
@@ -313,7 +313,7 @@ const HomePage = () => {
           </p>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-xl text-lg sm:text-xl font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg sm:text-xl font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
           >
             Jetzt kurz schreiben
             <ArrowRight className="w-6 h-6" />
@@ -324,9 +324,9 @@ const HomePage = () => {
       <section className="py-20 md:py-28 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Meine Spezialgebiete</span>
+            <div className="inline-flex items-center gap-2 bg-[#027BC8]/10 border border-[#027BC8]/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-[#027BC8] rounded-full"></div>
+              <span className="text-[#027BC8] text-sm font-semibold uppercase tracking-wider">Meine Spezialgebiete</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Was darf es für Sie sein?
@@ -388,7 +388,7 @@ const HomePage = () => {
           <div className="mt-12 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
             >
               Jetzt unverbindlich anfragen
               <ArrowRight className="w-5 h-5" />
@@ -404,9 +404,9 @@ const HomePage = () => {
       <section className="py-20 md:py-28 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-              <span className="text-teal-600 text-sm font-semibold uppercase tracking-wider">Der Ablauf</span>
+            <div className="inline-flex items-center gap-2 bg-[#027BC8]/10 border border-[#027BC8]/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-[#027BC8] rounded-full"></div>
+              <span className="text-[#027BC8] text-sm font-semibold uppercase tracking-wider">Der Ablauf</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               So einfach geht's
@@ -417,7 +417,7 @@ const HomePage = () => {
           </div>
 
           <div className="relative">
-            <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-teal-500/30 to-transparent"></div>
+            <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#027BC8]/30 to-transparent"></div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -449,23 +449,23 @@ const HomePage = () => {
                 <div key={i} className="group relative">
                   <div className="relative flex flex-col items-center text-center">
                     <div className="relative mb-6">
-                      <div className="absolute -inset-3 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative w-20 h-20 bg-gradient-to-br from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:shadow-teal-500/50 group-hover:scale-110 transition-all duration-300">
+                      <div className="absolute -inset-3 bg-gradient-to-br from-[#027BC8]/20 to-[#2ACFFD]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative w-20 h-20 bg-gradient-to-br from-[#027BC8] to-[#2ACFFD] rounded-2xl flex items-center justify-center shadow-lg shadow-[#027BC8]/30 group-hover:shadow-[#027BC8]/50 group-hover:scale-110 transition-all duration-300">
                         <svg className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                         </svg>
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-teal-500 rounded-full flex items-center justify-center">
-                        <span className="text-xs font-bold text-teal-600">{item.step}</span>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-[#027BC8] rounded-full flex items-center justify-center">
+                        <span className="text-xs font-bold text-[#027BC8]">{item.step}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">{item.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#027BC8] transition-colors">{item.title}</h3>
                     <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
                   </div>
 
                   {i < 3 && (
-                    <div className="hidden lg:block absolute top-10 -right-4 w-8 text-teal-500/40">
+                    <div className="hidden lg:block absolute top-10 -right-4 w-8 text-[#027BC8]/40">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                         <path d="M9 5l7 7-7 7" />
                       </svg>
@@ -479,7 +479,7 @@ const HomePage = () => {
           <div className="mt-16 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/30 transition-all"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
             >
               Jetzt Schritt 1 starten
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -490,9 +490,9 @@ const HomePage = () => {
 
       <section className="py-20 md:py-28 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Bekannt von</span>
+          <div className="inline-flex items-center gap-2 bg-[#027BC8]/10 border border-[#027BC8]/20 rounded-full px-4 py-2 mb-6">
+            <div className="w-2 h-2 bg-[#027BC8] rounded-full"></div>
+            <span className="text-[#027BC8] text-sm font-semibold uppercase tracking-wider">Bekannt von</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-12">
             Locations, die mir vertrauen
@@ -519,7 +519,7 @@ const HomePage = () => {
           <div className="mt-12">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
             >
               Jetzt Termin sichern
               <ArrowRight className="w-5 h-5" />
@@ -531,9 +531,9 @@ const HomePage = () => {
       <section className="py-20 md:py-28 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">FAQ</span>
+            <div className="inline-flex items-center gap-2 bg-[#027BC8]/10 border border-[#027BC8]/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-[#027BC8] rounded-full"></div>
+              <span className="text-[#027BC8] text-sm font-semibold uppercase tracking-wider">FAQ</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Noch Fragen?
@@ -544,7 +544,7 @@ const HomePage = () => {
           <div className="mt-12 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#027BC8] to-[#2ACFFD] text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-[#027BC8]/30 transition-all"
             >
               Weitere Fragen? Schreib mir
               <ArrowRight className="w-5 h-5" />
