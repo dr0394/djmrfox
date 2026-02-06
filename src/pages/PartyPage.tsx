@@ -272,7 +272,7 @@ const PartyPage = () => {
           <div className="min-h-[calc(100vh-5rem)] flex items-center overflow-hidden pt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="order-1 lg:order-1">
+                <div className="relative order-2 lg:order-2">
                   <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                     <img
                       src="https://i.imgur.com/hOCm3IG.jpeg"
@@ -282,7 +282,7 @@ const PartyPage = () => {
                   </div>
                 </div>
 
-                <div className="relative order-2 lg:order-2">
+                <div className="relative order-1 lg:order-1">
                   <a
                     href="https://www.google.com/search?sca_esv=d237f51df001ed9b&sxsrf=ANbL-n7wCh1qkjDhZif_gdNJiTEWSTYmqw:1769161897995&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x4QlQY-mut2sV68S_F_ltiARfVzor71oGTCSB91RonIrmsIPJj3Vv3OcsI38v6f0fVxW-n5RmTHzaqfntvkU-sPqXEpn&q=DJ+Mr.+Fox+Rezensionen&sa=X&ved=2ahUKEwibsuvTsaGSAxUn8rsIHSmsAMwQ0bkNegQINxAH&biw=1728&bih=889&dpr=2&aic=0"
                     target="_blank"

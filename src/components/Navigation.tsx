@@ -21,6 +21,14 @@ const Navigation = () => {
     { path: '/party', label: 'Party' }
   ];
 
+  const logoMap: Record<string, string> = {
+    '/': 'https://i.imgur.com/oy98MmI.png',
+    '/hochzeit': 'https://i.imgur.com/7fgTevm.png',
+    '/party': 'https://i.imgur.com/ym4Cnoe.png',
+  };
+
+  const currentLogo = logoMap[location.pathname] || logoMap['/'];
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -42,7 +50,7 @@ const Navigation = () => {
             className="group flex items-center gap-3 hover:opacity-90 transition-all"
           >
             <img
-              src="https://i.imgur.com/oy98MmI.png"
+              src={currentLogo}
               alt="DJ Mr. Fox Logo"
               className="h-16 w-auto object-contain"
             />
