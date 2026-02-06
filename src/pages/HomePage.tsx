@@ -345,8 +345,8 @@ const HomePage = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-rose-500/30">
-                  <Heart className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl overflow-hidden mb-6 shadow-lg">
+                  <img src="https://i.imgur.com/7fgTevm.png" alt="Hochzeit Logo" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">Hochzeit</h3>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-md">
@@ -370,8 +370,8 @@ const HomePage = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
-                  <PartyPopper className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl overflow-hidden mb-6 shadow-lg">
+                  <img src="https://i.imgur.com/ym4Cnoe.png" alt="Party Logo" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">Party</h3>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-md">
