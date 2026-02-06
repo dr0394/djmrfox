@@ -659,7 +659,7 @@ const PartyPage = () => {
                 },
                 {
                   step: '3',
-                  title: 'Vorgesprach',
+                  title: 'Vorgespräch',
                   description: 'Etwa zwei Wochen vor der Party führen wir ein ausführliches Telefonat zur Feinabstimmung: Programm, Highlights, Musikwünsche.',
                   icon: Phone
                 },
