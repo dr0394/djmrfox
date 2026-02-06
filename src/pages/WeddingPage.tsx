@@ -120,7 +120,7 @@ const WeddingPage = () => {
             alt="Hochzeit Hintergrund"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
         </div>
 
         <div className="relative z-10">
@@ -129,7 +129,7 @@ const WeddingPage = () => {
           <div className="min-h-[calc(100vh-5rem)] flex items-center overflow-hidden pt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="order-1 lg:order-1">
+                <div className="relative order-2 lg:order-1">
                   <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                     <img
                       src="https://i.imgur.com/nW3WlRE.jpeg"
@@ -139,7 +139,7 @@ const WeddingPage = () => {
                   </div>
                 </div>
 
-                <div className="relative order-2 lg:order-2">
+                <div className="order-1 lg:order-2">
                   <a
                     href="https://www.google.com/search?sca_esv=d237f51df001ed9b&sxsrf=ANbL-n7wCh1qkjDhZif_gdNJiTEWSTYmqw:1769161897995&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x4QlQY-mut2sV68S_F_ltiARfVzor71oGTCSB91RonIrmsIPJj3Vv3OcsI38v6f0fVxW-n5RmTHzaqfntvkU-sPqXEpn&q=DJ+Mr.+Fox+Rezensionen&sa=X&ved=2ahUKEwibsuvTsaGSAxUn8rsIHSmsAMwQ0bkNegQINxAH&biw=1728&bih=889&dpr=2&aic=0"
                     target="_blank"
@@ -163,7 +163,7 @@ const WeddingPage = () => {
                   </a>
 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-900 mb-8 leading-[0.95] tracking-tight">
-                  Ihr Tag.{' '}
+                  Euer Tag.{' '}
                   <span className="relative">
                     <span className="relative z-10" style={{ color: accentColor }}>
                       Unvergesslich.
@@ -172,7 +172,7 @@ const WeddingPage = () => {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl font-light">
-                  Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass Ihre Gäste
+                  Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass eure Gäste
                   <span className="text-gray-900 font-semibold"> bis zum Morgengrauen tanzen</span>.
                 </p>
 
@@ -232,10 +232,10 @@ const WeddingPage = () => {
                     Ich durfte schon so viele Paare an ihrem schönsten Tag begleiten – und jede Hochzeit war anders. Jede hatte ihre eigene Geschichte, ihre eigene Stimmung, ihren eigenen Magic Moment.
                   </p>
                   <p>
-                    Von romantischen Schlosshochzeiten über entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, Sie zu verstehen, Ihre Gäste zu lesen und den richtigen Ton zu treffen.
+                    Von romantischen Schlosshochzeiten uber entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, euch zu verstehen, eure Gäste zu lesen und den richtigen Ton zu treffen.
                   </p>
                   <p>
-                    Der erste Tanz, der Moment wenn Oma mit Enkel tanzt, die wilde Partyphase um Mitternacht – ich kenne all diese Momente und weiß genau, welche Musik sie perfekt macht.
+                    Der erste Tanz, der Moment wenn Oma mit Enkel tanzt, die wilden Partyphase um Mitternacht – ich kenne all diese Momente und weiß genau, welche Musik sie perfekt macht.
                   </p>
                 </div>
               </div>
@@ -289,16 +289,16 @@ const WeddingPage = () => {
 
           <div className="max-w-4xl mx-auto text-center relative">
             <h2 className="text-3xl md:text-4xl font-semibold text-white/60 mb-6">
-              Unsicher, ob ein DJ zu Ihnen passt?
+              Unsicher, ob ein DJ zu euch passt?
             </h2>
 
             <div className="space-y-8 mb-12">
               <p className="text-2xl md:text-3xl lg:text-4xl text-white font-light leading-relaxed">
-                Ihre Hochzeit verdient <strong className="font-semibold" style={{ color: accentColorLight }}>keinen Show-DJ</strong>, sondern Musik, die im richtigen Moment das Richtige tut.
+                Eure Hochzeit verdient <strong className="font-semibold" style={{ color: accentColorLight }}>keinen Show-DJ</strong>, sondern Musik, die im richtigen Moment das Richtige tut.
               </p>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto font-light">
-                Ich arbeite ohne starre Playlists und passe mich Ihnen und Ihren Gästen an – vom Sektempfang bis zum letzten Tanz.
+                Ich arbeite ohne starre Playlists und passe mich euch und euren Gästen an – vom Sektempfang bis zum letzten Tanz.
               </p>
             </div>
 
@@ -307,12 +307,12 @@ const WeddingPage = () => {
                 Neugierig auf meinen Stil?
               </h3>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 font-light">
-                Ich erstelle Ihnen einen kurzen <strong className="font-semibold" style={{ color: accentColorLight }}>4-Titel-Mix in einem Genre Ihrer Wahl</strong>, der zeigt, wie sich Ihr Abend anfühlen könnte.
+                Ich erstelle euch einen kurzen <strong className="font-semibold" style={{ color: accentColorLight }}>4-Titel-Mix in einem Genre Eurer Wahl</strong>, der zeigt, wie sich euer Abend anfühlen könnte.
               </p>
 
               <div className="space-y-6 text-lg md:text-xl text-white/80 mb-10 font-light">
                 <p>
-                  Wenn Sie denken: <span className="text-white font-medium italic">"Ja, genau so soll unsere Hochzeit klingen"</span> – perfekt.
+                  Wenn ihr denkt: <span className="text-white font-medium italic">"Ja, genau so soll unsere Hochzeit klingen"</span> – perfekt.
                 </p>
                 <p>
                   Wenn nicht, dann passen wir nicht zusammen – was völlig in Ordnung ist.
