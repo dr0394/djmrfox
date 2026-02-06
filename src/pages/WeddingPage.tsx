@@ -132,7 +132,7 @@ const WeddingPage = () => {
                 <div className="relative order-2 lg:order-1">
                   <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                     <img
-                      src="https://i.imgur.com/7zTzAmc.jpeg"
+                      src="https://i.imgur.com/nW3WlRE.jpeg"
                       alt="Hochzeit"
                       className="w-full h-full object-cover"
                     />
