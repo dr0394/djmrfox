@@ -52,12 +52,6 @@ const galleryItems: GalleryItem[] = [
     type: 'image'
   },
   {
-    src: 'https://i.imgur.com/nISr7rf.jpeg',
-    alt: 'Live Show',
-    category: 'Live',
-    type: 'image'
-  },
-  {
     src: 'https://i.imgur.com/KPytLRO.jpeg',
     alt: 'Event Details',
     category: 'Event',
