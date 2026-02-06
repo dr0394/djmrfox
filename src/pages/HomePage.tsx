@@ -17,24 +17,24 @@ const HomePage = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const homeFaqs = [
     {
-      question: "Wie früh sollte ich dich buchen?",
-      answer: "Je früher, desto besser – vor allem für Hochzeiten und Events an Wochenenden. Schreib mir einfach und wir schauen, ob dein Wunschtermin noch frei ist."
+      question: "Wie früh sollte ich Sie buchen?",
+      answer: "Je früher, desto besser – vor allem für Hochzeiten und Events an Wochenenden. Schreiben Sie mir einfach und wir schauen, ob Ihr Wunschtermin noch frei ist."
     },
     {
-      question: "Was kostet es, dich zu buchen?",
-      answer: "Das hängt von der Art deines Events, der Location und der Dauer ab. Schreib mir die Details und ich schicke dir innerhalb von 24 Stunden ein faires Angebot."
+      question: "Was kostet es, Sie zu buchen?",
+      answer: "Das hängt von der Art Ihres Events, der Location und der Dauer ab. Schreiben Sie mir die Details und ich schicke Ihnen innerhalb von 24 Stunden ein faires Angebot."
     },
     {
       question: "Kann ich Musikwünsche äußern?",
-      answer: "Auf jeden Fall! Du kannst mir im Vorfeld eine Wunschliste schicken und auch während der Party jederzeit Wünsche äußern. Dein Event, deine Musik."
+      answer: "Auf jeden Fall! Sie können mir im Vorfeld eine Wunschliste schicken und auch während der Party jederzeit Wünsche äußern. Ihr Event, Ihre Musik."
     },
     {
-      question: "Machst du Pausen beim Auflegen?",
+      question: "Machen Sie Pausen beim Auflegen?",
       answer: "Nein. Die Musik läuft durchgehend – von der ersten bis zur letzten Minute. So bleibt die Stimmung die ganze Nacht über auf dem Höhepunkt."
     },
     {
-      question: "Bringst du deine eigene Technik mit?",
-      answer: "Ja, alles inklusive. Ich bringe professionelles Sound- und Lichtequipment mit. Du brauchst nur einen Stromanschluss und etwas Platz für meinen Aufbau."
+      question: "Bringen Sie Ihre eigene Technik mit?",
+      answer: "Ja, alles inklusive. Ich bringe professionelles Sound- und Lichtequipment mit. Sie brauchen nur einen Stromanschluss und etwas Platz für meinen Aufbau."
     }
   ];
 
@@ -49,13 +49,13 @@ const HomePage = () => {
             alt="DJ Event Hintergrund"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left order-1 lg:order-1">
                 <a
                   href="https://www.google.com/search?sca_esv=d237f51df001ed9b&sxsrf=ANbL-n7wCh1qkjDhZif_gdNJiTEWSTYmqw:1769161897995&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x4QlQY-mut2sV68S_F_ltiARfVzor71oGTCSB91RonIrmsIPJj3Vv3OcsI38v6f0fVxW-n5RmTHzaqfntvkU-sPqXEpn&q=DJ+Mr.+Fox+Rezensionen&sa=X&ved=2ahUKEwibsuvTsaGSAxUn8rsIHSmsAMwQ0bkNegQINxAH&biw=1728&bih=889&dpr=2&aic=0"
                   target="_blank"
@@ -81,24 +81,24 @@ const HomePage = () => {
                 </a>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Dein Event.{' '}
+                Ihr Event.{' '}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-cyan-600">
+                  <span className="relative z-10 text-blue-600">
                     Unvergesslich.
                   </span>
-                  <span className="absolute bottom-2 left-0 w-full h-3 bg-cyan-400/30 -rotate-1"></span>
+                  <span className="absolute bottom-2 left-0 w-full h-3 bg-blue-400/30 -rotate-1"></span>
                 </span>
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass deine Gäste
-                <span className="text-cyan-600 font-semibold"> bis 6 Uhr morgens tanzen</span>.
+                Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass Ihre Gäste
+                <span className="text-blue-600 font-semibold"> bis 6 Uhr morgens tanzen</span>.
               </p>
 
               <div className="lg:hidden mb-8">
                 <div className="relative max-w-xs mx-auto">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur-2xl animate-pulse"></div>
-                  <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-cyan-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/30 via-blue-600/30 to-blue-700/30 rounded-3xl blur-2xl animate-pulse"></div>
+                  <div className="relative aspect-[2/3] rounded-2xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-blue-500/20">
                     <img
                       src="https://i.imgur.com/tPiandQ.jpeg"
                       alt="DJ Mr. Fox"
@@ -112,14 +112,14 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start">
                 <button
                   onClick={() => setIsFormOpen(true)}
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-cyan-600 text-white rounded-xl text-lg font-semibold hover:bg-cyan-700 transition-all shadow-lg shadow-cyan-600/20"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-blue-600 text-white rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
                 >
                   Jetzt Anfrage senden
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={() => document.getElementById('meine-geschichte')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-cyan-600 text-cyan-700 rounded-xl text-lg font-medium hover:bg-cyan-50 transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-blue-600 text-blue-700 rounded-xl text-lg font-medium hover:bg-blue-50 transition-all"
                 >
                   <Play className="w-5 h-5" />
                   Mehr erfahren
@@ -128,28 +128,28 @@ const HomePage = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0">
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Volle Tanzfläche garantiert</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Musik für alle Generationen</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">Profi-Equipment inklusive</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                   <span className="text-gray-700 text-sm">20+ Jahre Erfahrung</span>
                 </div>
               </div>
             </div>
 
-            <div className="hidden lg:block relative">
+            <div className="hidden lg:block relative order-2 lg:order-2">
               <div className="relative max-w-sm mx-auto">
-                <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur-2xl animate-pulse"></div>
-                <div className="relative aspect-[2/3] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-cyan-500/20">
+                <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/30 via-blue-600/30 to-blue-700/30 rounded-3xl blur-2xl animate-pulse"></div>
+                <div className="relative aspect-[2/3] rounded-3xl overflow-hidden border-2 border-white/40 shadow-2xl shadow-blue-500/20">
                   <img
                     src="https://i.imgur.com/RRjxyv1.jpeg"
                     alt="DJ Mr. Fox"
@@ -159,7 +159,7 @@ const HomePage = () => {
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-2xl">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -200,13 +200,13 @@ const HomePage = () => {
       <section id="meine-geschichte" className="py-20 md:py-28 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-              <span className="text-cyan-600 text-sm font-semibold uppercase tracking-wider">Die Lösung</span>
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Die Lösung</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Ein DJ, der deine{' '}
-              <span className="text-cyan-600">Gäste versteht</span>
+              Ein DJ, der Ihre{' '}
+              <span className="text-blue-600">Gäste versteht</span>
             </h2>
           </div>
 
@@ -247,10 +247,10 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-cyan-500 to-blue-500 text-white px-8 py-5 rounded-2xl shadow-2xl shadow-cyan-500/30 border border-cyan-400/30 z-10">
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-blue-500 to-blue-500 text-white px-8 py-5 rounded-2xl shadow-2xl shadow-blue-500/30 border border-blue-400/30 z-10">
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold mb-1">20+</div>
-                  <div className="text-cyan-100 text-sm">Jahre Erfahrung</div>
+                  <div className="text-blue-100 text-sm">Jahre Erfahrung</div>
                 </div>
               </div>
             </div>
@@ -265,7 +265,7 @@ const HomePage = () => {
                   Ich lese die Stimmung. Ich spüre, wann der richtige Moment für den nächsten Hit ist.
                   Und ich weiß genau, welcher Song bei welcher Gästegruppe funktioniert.
                 </p>
-                <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 rounded-xl">
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-xl">
                   <p className="text-gray-900 font-medium italic">
                     "Der perfekte Moment entsteht nicht durch Zufall – sondern durch Erfahrung, Gespür und die richtige Musik zur richtigen Zeit."
                   </p>
@@ -274,7 +274,7 @@ const HomePage = () => {
 
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
+                className="group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
               >
                 Unverbindlich anfragen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -289,8 +289,8 @@ const HomePage = () => {
               { icon: Music2, title: 'Profi-Technik', desc: 'Komplett inklusive' },
               { icon: Music2, title: 'Non-Stop-Musik', desc: 'Keine Pausen' }
             ].map((item, i) => (
-              <div key={i} className="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all shadow-sm">
-                <item.icon className="w-8 sm:w-10 h-8 sm:h-10 text-cyan-600 mb-4 group-hover:scale-110 transition-transform" />
+              <div key={i} className="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-blue-400 hover:bg-blue-50/50 transition-all shadow-sm">
+                <item.icon className="w-8 sm:w-10 h-8 sm:h-10 text-blue-600 mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
                 <p className="text-gray-600 text-xs sm:text-sm">{item.desc}</p>
               </div>
@@ -306,14 +306,14 @@ const HomePage = () => {
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            Dein Event verdient mehr als Standard
+            Ihr Event verdient mehr als Standard
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto">
-            Ich arbeite ohne starre Playlists und passe mich dir und deinen Gästen an – von der ersten bis zur letzten Minute.
+            Ich arbeite ohne starre Playlists und passe mich Ihnen und Ihren Gästen an – von der ersten bis zur letzten Minute.
           </p>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl text-lg sm:text-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-xl text-lg sm:text-xl font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
           >
             Jetzt kurz schreiben
             <ArrowRight className="w-6 h-6" />
@@ -329,7 +329,7 @@ const HomePage = () => {
               <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Meine Spezialgebiete</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Was darf es sein?
+              Was darf es für Sie sein?
             </h2>
           </div>
 
@@ -350,7 +350,7 @@ const HomePage = () => {
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">Hochzeit</h3>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-md">
-                  Euer schönster Tag verdient den perfekten Soundtrack. Von der Trauung bis zum letzten Tanz.
+                  Ihr schönster Tag verdient den perfekten Soundtrack. Von der Trauung bis zum letzten Tanz.
                 </p>
                 <div className="inline-flex items-center gap-3 text-lg font-semibold text-white group-hover:gap-5 transition-all">
                   Mehr erfahren
@@ -375,7 +375,7 @@ const HomePage = () => {
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">Party</h3>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-md">
-                  Geburtstag, Firmenfeier oder Festival? Ich sorge dafür, dass deine Gäste nicht mehr aufhören wollen.
+                  Geburtstag, Firmenfeier oder Festival? Ich sorge dafür, dass Ihre Gäste nicht mehr aufhören wollen.
                 </p>
                 <div className="inline-flex items-center gap-3 text-lg font-semibold text-white group-hover:gap-5 transition-all">
                   Mehr erfahren
@@ -388,7 +388,7 @@ const HomePage = () => {
           <div className="mt-12 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
             >
               Jetzt unverbindlich anfragen
               <ArrowRight className="w-5 h-5" />
@@ -412,7 +412,7 @@ const HomePage = () => {
               So einfach geht's
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              In nur vier Schritten zu deinem unvergesslichen Event
+              In nur vier Schritten zu Ihrem unvergesslichen Event
             </p>
           </div>
 
@@ -423,14 +423,14 @@ const HomePage = () => {
               {[
                 {
                   step: "01",
-                  title: "Du schreibst mir",
-                  desc: "Erzähl mir von deinem Event. Ich antworte innerhalb von 24 Stunden.",
+                  title: "Sie schreiben mir",
+                  desc: "Erzählen Sie mir von Ihrem Event. Ich antworte innerhalb von 24 Stunden.",
                   icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 },
                 {
                   step: "02",
                   title: "Wir sprechen",
-                  desc: "Telefonat oder Treffen. Ich will verstehen, was du dir wünschst.",
+                  desc: "Telefonat oder Treffen. Ich will verstehen, was Sie sich wünschen.",
                   icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 },
                 {
@@ -442,15 +442,15 @@ const HomePage = () => {
                 {
                   step: "04",
                   title: "Event wird legendär",
-                  desc: "90 Min vorher da, entspannter Aufbau - dann tanzen deine Gäste bis zum Schluss.",
+                  desc: "90 Min vorher da, entspannter Aufbau - dann tanzen Ihre Gäste bis zum Schluss.",
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((item, i) => (
                 <div key={i} className="group relative">
                   <div className="relative flex flex-col items-center text-center">
                     <div className="relative mb-6">
-                      <div className="absolute -inset-3 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:shadow-teal-500/50 group-hover:scale-110 transition-all duration-300">
+                      <div className="absolute -inset-3 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative w-20 h-20 bg-gradient-to-br from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:shadow-teal-500/50 group-hover:scale-110 transition-all duration-300">
                         <svg className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                         </svg>
@@ -479,7 +479,7 @@ const HomePage = () => {
           <div className="mt-16 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/30 transition-all"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/30 transition-all"
             >
               Jetzt Schritt 1 starten
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -519,7 +519,7 @@ const HomePage = () => {
           <div className="mt-12">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
             >
               Jetzt Termin sichern
               <ArrowRight className="w-5 h-5" />
@@ -531,9 +531,9 @@ const HomePage = () => {
       <section className="py-20 md:py-28 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-              <span className="text-cyan-600 text-sm font-semibold uppercase tracking-wider">FAQ</span>
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">FAQ</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Noch Fragen?
@@ -544,7 +544,7 @@ const HomePage = () => {
           <div className="mt-12 text-center">
             <button
               onClick={() => setIsFormOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all"
             >
               Weitere Fragen? Schreib mir
               <ArrowRight className="w-5 h-5" />
@@ -563,7 +563,7 @@ const HomePage = () => {
             Bereit für ein unvergessliches Event?
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto">
-            Schreib mir jetzt und sichere dir deinen Wunschtermin.
+            Schreiben Sie mir jetzt und sichern Sie sich Ihren Wunschtermin.
             Beliebte Daten sind schnell vergeben.
           </p>
           <button
