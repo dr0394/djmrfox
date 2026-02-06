@@ -76,7 +76,7 @@ const ContactSection = ({ type, variant = 'light', accentColor }: ContactSection
             Jetzt unverbindlich anfragen
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Erzahl mir von deinem Event und ich melde mich innerhalb von 24 Stunden bei dir
+            Erzähl mir von deinem Event und ich melde mich innerhalb von 24 Stunden bei dir
           </p>
         </div>
 
