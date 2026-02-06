@@ -123,7 +123,7 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 </div>
                 <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-gray-200 rounded-xl px-4 py-3">
                   <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">20+ Jahre Erfahrung</span>
+                  <span className="text-white-700 text-sm">20+ Jahre Erfahrung</span>
                 </div>
               </div>
             </div>
