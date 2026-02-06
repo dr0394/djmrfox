@@ -654,7 +654,7 @@ const PartyPage = () => {
                 {
                   step: '2',
                   title: 'Individuelles Angebot',
-                  description: 'Sie erhalten ein maßgeschneidertes Angebot per E-Mail. Nach Ihrer Bestätigung bekommen Sie eine Buchungsbestätigung.',
+                  description: 'Sie erhalten ein individuelles Angebot per E-Mail. Nach Ihrer Buchung bekommen Sie eine Buchungsbestätigung.',
                   icon: CheckCircle
                 },
                 {
