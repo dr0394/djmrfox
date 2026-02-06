@@ -506,7 +506,7 @@ const WeddingPage = () => {
                 },
                 {
                   step: '3',
-                  title: 'Vorgesprach',
+                  title: 'Vorgespräch',
                   description: 'Etwa zwei Wochen vor der Hochzeit führen wir ein ausführliches Telefonat zur Feinabstimmung: Eröffnungstanz, Spiele, Highlights, Musikwünsche.',
                   icon: Phone
                 },
