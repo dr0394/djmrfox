@@ -250,7 +250,7 @@ const HomePage = () => {
               <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#027BC8] to-[#2ACFFD] text-white px-8 py-5 rounded-2xl shadow-2xl shadow-[#027BC8]/30 border border-[#2ACFFD]/30 z-10">
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold mb-1">20+</div>
-                  <div className="text-[#ffffff]/70 text-sm">Jahre Erfahrung</div>
+                  <div className="text-[#2ACFFD]/70 text-sm">Jahre Erfahrung</div>
                 </div>
               </div>
             </div>

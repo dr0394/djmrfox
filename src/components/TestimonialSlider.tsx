@@ -92,17 +92,17 @@ const TestimonialSlider = ({ testimonials, accentColor = 'blue', variant = 'ligh
 
     return (
       <div className="relative max-w-4xl mx-auto">
-        <div className={`rounded-2xl shadow-xl p-8 md:p-12 border-2 backdrop-blur-sm ${isDark ? 'bg-gray-800/50' : 'bg-white/40'}`} style={{ borderColor: `${color}50` }}>
+        <div className="rounded-2xl shadow-xl p-8 md:p-12 border-2 bg-white/40 backdrop-blur-sm" style={{ borderColor: `${color}50` }}>
           <div className="w-16 h-16 text-white p-3 rounded-full mb-6 mx-auto flex items-center justify-center" style={{ backgroundColor: color }}>
             <Quote className="w-10 h-10" />
           </div>
           <div className="min-h-[200px] flex flex-col justify-center">
-            <p className={`text-xl md:text-2xl text-center mb-8 leading-relaxed ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
+            <p className="text-xl md:text-2xl text-center mb-8 leading-relaxed text-gray-700">
               "{testimonials[current].text}"
             </p>
             <div className="text-center">
-              <p className={`font-bold text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonials[current].author}</p>
-              <p className={isDark ? 'text-gray-300' : 'text-gray-600'}>{testimonials[current].event}</p>
+              <p className="font-bold text-lg text-gray-900">{testimonials[current].author}</p>
+              <p className="text-gray-600">{testimonials[current].event}</p>
             </div>
           </div>
         </div>
