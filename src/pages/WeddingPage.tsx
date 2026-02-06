@@ -229,7 +229,7 @@ const WeddingPage = () => {
                 </div>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
                   <p className="text-2xl font-light text-gray-800">
-                    Ich durfte schon so viele Paare an ihrem schonsten Tag begleiten – und jede Hochzeit war anders. Jede hatte ihre eigene Geschichte, ihre eigene Stimmung, ihren eigenen Magic Moment.
+                    Ich durfte schon so viele Paare an ihrem schönsten Tag begleiten – und jede Hochzeit war anders. Jede hatte ihre eigene Geschichte, ihre eigene Stimmung, ihren eigenen Magic Moment.
                   </p>
                   <p>
                     Von romantischen Schlosshochzeiten uber entspannte Gartenfeiern bis zu eleganten Hotelhochzeiten – ich habe gelernt, dass es nicht den einen perfekten Song gibt. Es geht darum, euch zu verstehen, eure Gäste zu lesen und den richtigen Ton zu treffen.
