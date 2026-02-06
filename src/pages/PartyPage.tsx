@@ -255,7 +255,7 @@ const PartyPage = () => {
   ];
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-gray-950">
       <section className="relative min-h-screen">
         <div className="absolute inset-0 z-0">
           <img
@@ -263,7 +263,7 @@ const PartyPage = () => {
             alt="Party Hintergrund"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gray-950/80 backdrop-blur-sm"></div>
         </div>
 
         <div className="relative z-10">
@@ -277,7 +277,7 @@ const PartyPage = () => {
                     href="https://www.google.com/search?sca_esv=d237f51df001ed9b&sxsrf=ANbL-n7wCh1qkjDhZif_gdNJiTEWSTYmqw:1769161897995&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x4QlQY-mut2sV68S_F_ltiARfVzor71oGTCSB91RonIrmsIPJj3Vv3OcsI38v6f0fVxW-n5RmTHzaqfntvkU-sPqXEpn&q=DJ+Mr.+Fox+Rezensionen&sa=X&ved=2ahUKEwibsuvTsaGSAxUn8rsIHSmsAMwQ0bkNegQINxAH&biw=1728&bih=889&dpr=2&aic=0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-white border border-gray-200 rounded-full px-5 py-3 mb-10 shadow-sm hover:shadow-md transition-all"
+                    className="inline-flex items-center gap-3 bg-gray-900/70 border border-gray-700 rounded-full px-5 py-3 mb-10 shadow-sm hover:shadow-md transition-all backdrop-blur-sm"
                   >
                     <svg viewBox="0 0 24 24" className="w-6 h-6 flex-shrink-0">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -291,11 +291,11 @@ const PartyPage = () => {
                           <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
-                      <span className="text-gray-900 text-sm font-normal">5.0 auf Google</span>
+                      <span className="text-white text-sm font-normal">5.0 auf Google</span>
                     </div>
                   </a>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-900 mb-8 leading-[0.95] tracking-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[0.95] tracking-tight">
                   Ihre Party.{' '}
                   <span className="relative">
                     <span className="relative z-10" style={{ color: accentColor }}>
@@ -304,9 +304,9 @@ const PartyPage = () => {
                   </span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl font-light">
-                  Ich bin <strong className="text-gray-900 font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass Ihre Gäste
-                  <span className="text-gray-900 font-semibold"> bis zum Morgengrauen tanzen</span>.
+                <p className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-2xl font-light">
+                  Ich bin <strong className="text-white font-semibold">DJ Mr. Fox</strong>. Seit 20 Jahren sorge ich dafür, dass Ihre Gäste
+                  <span className="text-white font-semibold"> bis zum Morgengrauen tanzen</span>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -322,25 +322,25 @@ const PartyPage = () => {
                   </button>
                   <button
                     onClick={() => document.getElementById('meine-erfahrung')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-gray-300 text-gray-900 rounded-xl text-xl font-medium hover:bg-gray-50 transition-all"
+                    className="group inline-flex items-center justify-center gap-3 px-10 py-6 border-2 border-gray-600 text-white rounded-xl text-xl font-medium hover:bg-gray-800 transition-all"
                   >
-                    <Play className="w-6 h-6 text-gray-900" />
+                    <Play className="w-6 h-6 text-white" />
                     Mehr erfahren
                   </button>
                 </div>
 
                 <div className="grid grid-cols-3 gap-8 max-w-xl">
                   <div className="text-center">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">300+</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Partys</div>
+                    <div className="text-4xl md:text-5xl font-semibold text-white mb-1">300+</div>
+                    <div className="text-gray-300 text-sm uppercase tracking-wider font-light">Partys</div>
                   </div>
-                  <div className="text-center border-l border-r border-gray-300">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">20+</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Jahre</div>
+                  <div className="text-center border-l border-r border-gray-600">
+                    <div className="text-4xl md:text-5xl font-semibold text-white mb-1">20+</div>
+                    <div className="text-gray-300 text-sm uppercase tracking-wider font-light">Jahre</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl md:text-5xl font-semibold text-gray-900 mb-1">5.0</div>
-                    <div className="text-gray-600 text-sm uppercase tracking-wider font-light">Bewertung</div>
+                    <div className="text-4xl md:text-5xl font-semibold text-white mb-1">5.0</div>
+                    <div className="text-gray-300 text-sm uppercase tracking-wider font-light">Bewertung</div>
                   </div>
                 </div>
               </div>
@@ -360,18 +360,18 @@ const PartyPage = () => {
         </div>
       </section>
 
-      <section id="meine-erfahrung" className="py-32 px-4 bg-gray-50">
+      <section id="meine-erfahrung" className="py-32 px-4 bg-gray-950">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-5 gap-16 items-start mb-32">
               <div className="lg:col-span-3 space-y-8">
                 <div>
                   <span className="text-sm font-medium tracking-widest uppercase" style={{ color: accentColor }}>Partys sind meine Leidenschaft</span>
-                  <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 mt-4 mb-8 leading-tight">
+                  <h2 className="text-5xl md:text-6xl font-semibold text-white mt-4 mb-8 leading-tight">
                     Über 300 Partys – jede unvergesslich
                   </h2>
                 </div>
-                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
-                  <p className="text-2xl font-light text-gray-800">
+                <div className="space-y-6 text-lg text-gray-300 leading-relaxed font-light">
+                  <p className="text-2xl font-light text-gray-100">
                     Von intimen Geburtstagsfeiern über große Firmenfeste bis zu legendären Festival-Nächten – ich habe sie alle erlebt. Und jede Party war einzigartig.
                   </p>
                   <p>
@@ -402,7 +402,7 @@ const PartyPage = () => {
             </div>
 
             <div className="mb-24">
-              <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-12 text-center">Warum Firmen und Privatpersonen mich wählen</h3>
+              <h3 className="text-3xl md:text-4xl font-semibold text-white mb-12 text-center">Warum Firmen und Privatpersonen mich wählen</h3>
               <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
                 {[
                   { title: 'Stimmungsvolles Gespür', desc: 'Ich lese die Tanzfläche und reagiere in Echtzeit auf die Energie' },
@@ -410,9 +410,9 @@ const PartyPage = () => {
                   { title: 'Internationale Erfahrung', desc: 'Seit 2005 ALDIANA-DJ mit Erfahrung in mehrsprachigen Events weltweit' },
                   { title: 'Open-End-Flexibilität', desc: 'Keine Zeitlimits – ich spiele, bis die letzten Gäste gehen' }
                 ].map((item, index) => (
-                  <div key={index} className="pb-8 border-b border-gray-200">
-                    <h4 className="text-xl font-medium text-gray-900 mb-3">{item.title}</h4>
-                    <p className="text-gray-600 font-light leading-relaxed">{item.desc}</p>
+                  <div key={index} className="pb-8 border-b border-gray-700">
+                    <h4 className="text-xl font-medium text-white mb-3">{item.title}</h4>
+                    <p className="text-gray-300 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -420,16 +420,16 @@ const PartyPage = () => {
 
             <div className="grid md:grid-cols-3 gap-12 text-center">
               <div>
-                <div className="text-5xl font-semibold text-gray-900 mb-3">300+</div>
-                <div className="text-lg text-gray-600 font-light">Partys & Events</div>
+                <div className="text-5xl font-semibold text-white mb-3">300+</div>
+                <div className="text-lg text-gray-300 font-light">Partys & Events</div>
               </div>
               <div>
-                <div className="text-5xl font-semibold text-gray-900 mb-3">20+</div>
-                <div className="text-lg text-gray-600 font-light">Jahre Erfahrung</div>
+                <div className="text-5xl font-semibold text-white mb-3">20+</div>
+                <div className="text-lg text-gray-300 font-light">Jahre Erfahrung</div>
               </div>
               <div>
-                <div className="text-5xl font-semibold text-gray-900 mb-3">100%</div>
-                <div className="text-lg text-gray-600 font-light">Energie</div>
+                <div className="text-5xl font-semibold text-white mb-3">100%</div>
+                <div className="text-lg text-gray-300 font-light">Energie</div>
               </div>
             </div>
           </div>
@@ -492,12 +492,12 @@ const PartyPage = () => {
           </div>
         </section>
 
-      <section id="services" className="py-24 px-4 bg-white">
+      <section id="services" className="py-24 px-4 bg-gray-900">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-6">
               Anlässe & Event-Typen
             </h2>
-            <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto font-light">
+            <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto font-light">
               Professioneller DJ-Service für jeden Anlass – maßgeschneidert auf Ihre Party
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -533,15 +533,15 @@ const PartyPage = () => {
                   description: 'Polterabend, Junggesellenabschied – eure Party, eure Regeln'
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all shadow-sm">
+                <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:shadow-lg hover:shadow-orange-500/20 transition-all shadow-sm backdrop-blur-sm">
                   <service.icon className="w-12 h-12 mb-4" style={{ color: accentColor }} />
-                  <h3 className="text-xl font-medium text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 font-light">{service.description}</p>
+                  <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 font-light">{service.description}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-12 bg-gray-50 p-8 rounded-2xl border-2" style={{ borderColor: `${accentColor}50` }}>
-              <h3 className="text-2xl font-medium text-gray-900 mb-4">Inklusive:</h3>
+            <div className="mt-12 bg-gray-800/50 p-8 rounded-2xl border-2 backdrop-blur-sm" style={{ borderColor: accentColor }}>
+              <h3 className="text-2xl font-medium text-white mb-4">Inklusive:</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
                   'Professionelle Licht- und Tontechnik',
@@ -555,7 +555,7 @@ const PartyPage = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: accentColor }} />
-                    <span className="text-gray-700 font-light">{item}</span>
+                    <span className="text-gray-200 font-light">{item}</span>
                   </div>
                 ))}
               </div>
@@ -563,17 +563,17 @@ const PartyPage = () => {
           </div>
         </section>
 
-      <section className="py-24 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-gray-950">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-16">
               Pakete & Preise
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
+              <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 shadow-sm backdrop-blur-sm">
                 <div className="text-center mb-6">
-                  <Clock className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Basis-Paket</h3>
-                  <p className="text-gray-600">Perfekt für Events mit festem Zeitplan</p>
+                  <Clock className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-3xl font-medium text-white mb-2">Basis-Paket</h3>
+                  <p className="text-gray-300">Perfekt für Events mit festem Zeitplan</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {[
@@ -583,24 +583,24 @@ const PartyPage = () => {
                     'Planbare Kosten'
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setIsFormOpen(true)} className="block w-full py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-center font-medium transition-colors border border-gray-300">
+                <button onClick={() => setIsFormOpen(true)} className="block w-full py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-center font-medium transition-colors border border-gray-600">
                   Angebot anfordern
                 </button>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl border-2 relative shadow-sm" style={{ borderColor: accentColor }}>
+              <div className="bg-gray-800/50 p-8 rounded-2xl border-2 relative shadow-sm backdrop-blur-sm" style={{ borderColor: accentColor }}>
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-white px-6 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: accentColor }}>
                   EMPFOHLEN
                 </div>
                 <div className="text-center mb-6">
                   <Zap className="w-16 h-16 mx-auto mb-4" style={{ color: accentColor }} />
-                  <h3 className="text-3xl font-medium text-gray-900 mb-2">Open End</h3>
-                  <p className="text-gray-700">Feiert so lange ihr möchtet!</p>
+                  <h3 className="text-3xl font-medium text-white mb-2">Open End</h3>
+                  <p className="text-gray-200">Feiert so lange ihr möchtet!</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {[
@@ -612,7 +612,7 @@ const PartyPage = () => {
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: accentColor }} />
-                      <span className="text-gray-800 font-light">{feature}</span>
+                      <span className="text-gray-100 font-light">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -627,20 +627,20 @@ const PartyPage = () => {
                 </button>
               </div>
             </div>
-            <div className="mt-12 text-center text-gray-600 max-w-3xl mx-auto">
+            <div className="mt-12 text-center text-gray-300 max-w-3xl mx-auto">
               <p className="mb-4">
-                <strong className="text-gray-900">Verpflegung:</strong> Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung.
+                <strong className="text-white">Verpflegung:</strong> Ich benötige lediglich alkoholfreie Getränke und eine kleine Stärkung während der Veranstaltung.
               </p>
               <p>
-                <strong className="text-gray-900">Bezahlung:</strong> Die Bezahlung erfolgt normalerweise nach der Party in bar. Alle Details werden im individuellen Angebot festgehalten.
+                <strong className="text-white">Bezahlung:</strong> Die Bezahlung erfolgt normalerweise nach der Party in bar. Alle Details werden im individuellen Angebot festgehalten.
               </p>
             </div>
           </div>
         </section>
 
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-gray-900">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-16">
               Ablauf & Vorbereitung
             </h2>
             <div className="space-y-8">
@@ -682,7 +682,7 @@ const PartyPage = () => {
                   icon: Zap
                 }
               ].map((item, index) => (
-                <div key={index} className="flex gap-6 items-start bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+                <div key={index} className="flex gap-6 items-start bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:shadow-lg hover:shadow-orange-500/20 transition-all backdrop-blur-sm">
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 text-white rounded-full flex items-center justify-center text-2xl font-medium" style={{ backgroundColor: accentColor }}>
                       {item.step}
@@ -691,9 +691,9 @@ const PartyPage = () => {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <item.icon className="w-8 h-8" style={{ color: accentColor }} />
-                      <h3 className="text-2xl font-medium text-gray-900">{item.title}</h3>
+                      <h3 className="text-2xl font-medium text-white">{item.title}</h3>
                     </div>
-                    <p className="text-gray-600 text-lg font-light">{item.description}</p>
+                    <p className="text-gray-300 text-lg font-light">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -701,9 +701,9 @@ const PartyPage = () => {
           </div>
         </section>
 
-      <section className="py-24 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-gray-950">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-16">
               Impressionen & Equipment
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
@@ -753,8 +753,8 @@ const PartyPage = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-white p-8 rounded-2xl border-2 shadow-sm" style={{ borderColor: `${accentColor}50` }}>
-              <h3 className="text-2xl font-medium text-gray-900 mb-6 text-center">Technische Details</h3>
+            <div className="bg-gray-800/50 p-8 rounded-2xl border-2 shadow-sm backdrop-blur-sm" style={{ borderColor: accentColor }}>
+              <h3 className="text-2xl font-medium text-white mb-6 text-center">Technische Details</h3>
               <div className="grid md:grid-cols-3 gap-8">
                 {[
                   {
@@ -771,10 +771,10 @@ const PartyPage = () => {
                   }
                 ].map((section, index) => (
                   <div key={index}>
-                    <h4 className="text-lg font-medium text-gray-900 mb-4">{section.title}</h4>
+                    <h4 className="text-lg font-medium text-white mb-4">{section.title}</h4>
                     <ul className="space-y-2">
                       {section.items.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-200">
                           <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: accentColor }} />
                           <span>{item}</span>
                         </li>
@@ -787,25 +787,25 @@ const PartyPage = () => {
           </div>
         </section>
 
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-gray-900">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-16">
               Das sagen meine Kunden
             </h2>
-            <TestimonialSlider testimonials={partyTestimonials} accentColor="orange" variant="light" />
+            <TestimonialSlider testimonials={partyTestimonials} accentColor="orange" variant="dark" />
           </div>
         </section>
 
-      <section className="py-24 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-gray-950">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-16">
               Häufige Fragen
             </h2>
-            <FAQAccordion faqs={partyFaqs} accentColor="orange" variant="light" />
+            <FAQAccordion faqs={partyFaqs} accentColor="orange" variant="dark" />
           </div>
         </section>
 
-        <ContactSection type="party" variant="light" accentColor={accentColor} />
+        <ContactSection type="party" variant="dark" accentColor={accentColor} />
 
         <Footer />
 

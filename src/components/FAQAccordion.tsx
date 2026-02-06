@@ -34,14 +34,14 @@ const FAQAccordion = ({ faqs, accentColor = 'blue', variant = 'light' }: FAQAcco
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-white/40 backdrop-blur-sm border-2 rounded-2xl overflow-hidden transition-all"
-            style={{ borderColor: openIndex === index ? `${color}80` : '#e5e7eb' }}
+            className={`backdrop-blur-sm border-2 rounded-2xl overflow-hidden transition-all ${isDark ? 'bg-gray-800/50' : 'bg-white/40'}`}
+            style={{ borderColor: openIndex === index ? `${color}80` : (isDark ? '#374151' : '#e5e7eb') }}
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/30 transition-colors"
+              className={`w-full px-6 py-5 flex items-center justify-between text-left transition-colors ${isDark ? 'hover:bg-gray-700/50' : 'hover:bg-white/30'}`}
             >
-              <span className="text-lg font-medium text-gray-900 pr-4">{faq.question}</span>
+              <span className={`text-lg font-medium pr-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{faq.question}</span>
               <ChevronDown
                 className="w-6 h-6 flex-shrink-0 transition-transform"
                 style={{ color: color, transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)' }}
@@ -52,7 +52,7 @@ const FAQAccordion = ({ faqs, accentColor = 'blue', variant = 'light' }: FAQAcco
                 openIndex === index ? 'max-h-96' : 'max-h-0'
               }`}
             >
-              <div className="px-6 pb-5 text-gray-600 leading-relaxed font-light">
+              <div className={`px-6 pb-5 leading-relaxed font-light ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                 {faq.answer}
               </div>
             </div>
