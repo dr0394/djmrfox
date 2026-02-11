@@ -17,142 +17,28 @@ interface GalleryItem {
   src: string;
   alt: string;
   category: string;
-  type: 'image' | 'video';
 }
 
 const partyGalleryItems: GalleryItem[] = [
-  {
-    src: 'https://i.imgur.com/4kkvnHE.mp4',
-    alt: 'Event Video',
-    category: 'Video',
-    type: 'video'
-  },
-  {
-    src: 'https://i.imgur.com/8xlq3h6.jpeg',
-    alt: 'Event Moment',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/gthBXHs.jpeg',
-    alt: 'Party Atmosphere',
-    category: 'Party',
-    type: 'image'
-  },
-  {
-    src: '/photo-2026-01-23-10-45-20.jpg',
-    alt: 'DJ Setup',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/ARjfNZC.mp4',
-    alt: 'DJ Performance',
-    category: 'Video',
-    type: 'video'
-  },
-  {
-    src: 'https://i.imgur.com/SC8oJvS.jpeg',
-    alt: 'Hochzeit',
-    category: 'Hochzeit',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/n15GPbv.jpeg',
-    alt: 'Event Setup',
-    category: 'Setup',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/NDVGL8o.jpeg',
-    alt: 'Live Performance',
-    category: 'Live',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/33mTfAt.mp4',
-    alt: 'Party Video',
-    category: 'Video',
-    type: 'video'
-  },
-  {
-    src: 'https://i.imgur.com/zVKZ8X6.jpeg',
-    alt: 'Event Moment',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/t0zaQat.jpeg',
-    alt: 'DJ Setup',
-    category: 'Setup',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/zBH9mtO.jpeg',
-    alt: 'Party Crowd',
-    category: 'Party',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/mUQWp9a.jpeg',
-    alt: 'Hochzeitsfeier',
-    category: 'Hochzeit',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/GDHRbrT.jpeg',
-    alt: 'Event Atmosphere',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/nISr7rf.jpeg',
-    alt: 'Live Show',
-    category: 'Live',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/SJb7hcc.jpeg',
-    alt: 'Party Night',
-    category: 'Party',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/KPytLRO.jpeg',
-    alt: 'Event Details',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/95rGaKS.jpeg',
-    alt: 'DJ Equipment',
-    category: 'Setup',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/azx2njQ.jpeg',
-    alt: 'Hochzeit Celebration',
-    category: 'Hochzeit',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/f67oWfe.jpeg',
-    alt: 'Event Highlights',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/cbNwVnC.jpeg',
-    alt: 'Event Moment',
-    category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/3zDqrc5.jpeg',
-    alt: 'Event Memory',
-    category: 'Event',
-    type: 'image'
-  }
+  { src: 'https://i.imgur.com/8xlq3h6.jpeg', alt: 'Event Moment', category: 'Event' },
+  { src: 'https://i.imgur.com/gthBXHs.jpeg', alt: 'Party Atmosphere', category: 'Party' },
+  { src: '/photo-2026-01-23-10-45-20.jpg', alt: 'DJ Setup', category: 'Event' },
+  { src: 'https://i.imgur.com/SC8oJvS.jpeg', alt: 'Hochzeit', category: 'Hochzeit' },
+  { src: 'https://i.imgur.com/n15GPbv.jpeg', alt: 'Event Setup', category: 'Setup' },
+  { src: 'https://i.imgur.com/NDVGL8o.jpeg', alt: 'Live Performance', category: 'Live' },
+  { src: 'https://i.imgur.com/zVKZ8X6.jpeg', alt: 'Event Moment', category: 'Event' },
+  { src: 'https://i.imgur.com/t0zaQat.jpeg', alt: 'DJ Setup', category: 'Setup' },
+  { src: 'https://i.imgur.com/zBH9mtO.jpeg', alt: 'Party Crowd', category: 'Party' },
+  { src: 'https://i.imgur.com/mUQWp9a.jpeg', alt: 'Hochzeitsfeier', category: 'Hochzeit' },
+  { src: 'https://i.imgur.com/GDHRbrT.jpeg', alt: 'Event Atmosphere', category: 'Event' },
+  { src: 'https://i.imgur.com/nISr7rf.jpeg', alt: 'Live Show', category: 'Live' },
+  { src: 'https://i.imgur.com/SJb7hcc.jpeg', alt: 'Party Night', category: 'Party' },
+  { src: 'https://i.imgur.com/KPytLRO.jpeg', alt: 'Event Details', category: 'Event' },
+  { src: 'https://i.imgur.com/95rGaKS.jpeg', alt: 'DJ Equipment', category: 'Setup' },
+  { src: 'https://i.imgur.com/azx2njQ.jpeg', alt: 'Hochzeit Celebration', category: 'Hochzeit' },
+  { src: 'https://i.imgur.com/f67oWfe.jpeg', alt: 'Event Highlights', category: 'Event' },
+  { src: 'https://i.imgur.com/cbNwVnC.jpeg', alt: 'Event Moment', category: 'Event' },
+  { src: 'https://i.imgur.com/3zDqrc5.jpeg', alt: 'Event Memory', category: 'Event' },
 ];
 
 const PartyPage = () => {
@@ -713,35 +599,15 @@ const PartyPage = () => {
                   onClick={() => openLightbox(index)}
                   className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg"
                 >
-                  {item.type === 'video' ? (
-                    <>
-                      <video
-                        src={item.src}
-                        className="w-full h-full object-cover"
-                        muted
-                        playsInline
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-gray-900/40">
-                        <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
-                          <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                    />
-                  )}
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-14 h-14 rounded-full flex items-center justify-center mb-3 transform scale-75 group-hover:scale-100 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 107, 0, 0.2)' }}>
-                      {item.type === 'video' ? (
-                        <Play className="w-6 h-6 text-white" />
-                      ) : (
-                        <ZoomIn className="w-6 h-6 text-white" />
-                      )}
+                      <ZoomIn className="w-6 h-6 text-white" />
                     </div>
                     <span className="text-white font-medium">{item.category}</span>
                   </div>
@@ -843,20 +709,11 @@ const PartyPage = () => {
               className="max-w-5xl max-h-[85vh] px-4"
               onClick={(e) => e.stopPropagation()}
             >
-              {partyGalleryItems[activeImage].type === 'video' ? (
-                <video
-                  src={partyGalleryItems[activeImage].src}
-                  controls
-                  autoPlay
-                  className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
-                />
-              ) : (
-                <img
-                  src={partyGalleryItems[activeImage].src}
-                  alt={partyGalleryItems[activeImage].alt}
-                  className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
-                />
-              )}
+              <img
+                src={partyGalleryItems[activeImage].src}
+                alt={partyGalleryItems[activeImage].alt}
+                className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+              />
               <div className="text-center mt-4">
                 <span className="text-white font-medium">{partyGalleryItems[activeImage].alt}</span>
                 <span className="text-gray-500 mx-3">|</span>
