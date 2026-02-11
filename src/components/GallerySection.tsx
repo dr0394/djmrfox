@@ -1,104 +1,73 @@
 import { useState } from 'react';
-import { X, ZoomIn, Play } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 interface GalleryItem {
   src: string;
   alt: string;
   category: string;
-  type: 'image' | 'video';
 }
 
 const galleryItems: GalleryItem[] = [
   {
-    src: 'https://i.imgur.com/4kkvnHE.mp4',
-    alt: 'Event Video',
-    category: 'Video',
-    type: 'video'
-  },
-  {
     src: 'https://i.imgur.com/8xlq3h6.jpeg',
     alt: 'Event Moment',
     category: 'Event',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/ARjfNZC.mp4',
-    alt: 'DJ Performance',
-    category: 'Video',
-    type: 'video'
   },
   {
     src: 'https://i.imgur.com/n15GPbv.jpeg',
     alt: 'Event Setup',
     category: 'Setup',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/NDVGL8o.jpeg',
     alt: 'Live Performance',
     category: 'Live',
-    type: 'image'
-  },
-  {
-    src: 'https://i.imgur.com/33mTfAt.mp4',
-    alt: 'Party Video',
-    category: 'Video',
-    type: 'video'
   },
   {
     src: 'https://i.imgur.com/zVKZ8X6.jpeg',
     alt: 'Event Moment',
     category: 'Event',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/KPytLRO.jpeg',
     alt: 'Event Details',
     category: 'Event',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/95rGaKS.jpeg',
     alt: 'DJ Equipment',
     category: 'Setup',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/azx2njQ.jpeg',
     alt: 'Hochzeit Celebration',
     category: 'Hochzeit',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/lYwzPd6.jpeg',
     alt: 'Party Energy',
     category: 'Party',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/f67oWfe.jpeg',
     alt: 'Event Highlights',
     category: 'Event',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/vJBPpbe.jpeg',
     alt: 'Live Performance',
     category: 'Live',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/7e8IUh2.jpeg',
     alt: 'Party Scene',
     category: 'Party',
-    type: 'image'
   },
   {
     src: 'https://i.imgur.com/3zDqrc5.jpeg',
     alt: 'Event Memory',
     category: 'Event',
-    type: 'image'
-  }
+  },
 ];
 
 const GallerySection = () => {
@@ -148,35 +117,15 @@ const GallerySection = () => {
                 onClick={() => openLightbox(index)}
                 className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer border border-gray-200 shadow-lg"
               >
-                {item.type === 'video' ? (
-                  <>
-                    <video
-                      src={item.src}
-                      className="w-full h-full object-cover"
-                      muted
-                      playsInline
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-900/40">
-                      <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                )}
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                    {item.type === 'video' ? (
-                      <Play className="w-6 h-6 text-white" />
-                    ) : (
-                      <ZoomIn className="w-6 h-6 text-white" />
-                    )}
+                    <ZoomIn className="w-6 h-6 text-white" />
                   </div>
                   <span className="text-white font-medium">{item.category}</span>
                 </div>
@@ -225,20 +174,11 @@ const GallerySection = () => {
             className="max-w-5xl max-h-[85vh] px-4"
             onClick={(e) => e.stopPropagation()}
           >
-            {galleryItems[activeImage].type === 'video' ? (
-              <video
-                src={galleryItems[activeImage].src}
-                controls
-                autoPlay
-                className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
-              />
-            ) : (
-              <img
-                src={galleryItems[activeImage].src}
-                alt={galleryItems[activeImage].alt}
-                className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
-              />
-            )}
+            <img
+              src={galleryItems[activeImage].src}
+              alt={galleryItems[activeImage].alt}
+              className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+            />
             <div className="text-center mt-4">
               <span className="text-white font-medium">{galleryItems[activeImage].alt}</span>
               <span className="text-gray-500 mx-3">|</span>
