@@ -565,7 +565,6 @@ const WeddingPage = () => {
                 'https://i.imgur.com/ej3WAAS.jpeg',
                 'https://i.imgur.com/Jp8JCWs.jpeg',
                 'https://i.imgur.com/yUrJjVQ.jpeg',
-                'https://i.imgur.com/KOSxM5k.jpeg',
                 'https://i.imgur.com/XQZNrV1.jpeg',
                 'https://i.imgur.com/c6pdccI.jpeg',
                 'https://i.imgur.com/aPvvYzA.jpeg'
