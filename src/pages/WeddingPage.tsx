@@ -562,10 +562,10 @@ const WeddingPage = () => {
                 'https://i.imgur.com/9OUHdZ3.jpeg',
                 'https://i.imgur.com/D4pZwBs.jpeg',
                 'https://i.imgur.com/ZuUD490.jpeg',
-                'https://i.imgur.com/ej3WAAS.jpeg',
+                'https://i.imgur.com/XQZNrV1.jpeg',
                 'https://i.imgur.com/Jp8JCWs.jpeg',
                 'https://i.imgur.com/yUrJjVQ.jpeg',
-                'https://i.imgur.com/XQZNrV1.jpeg',
+                'https://i.imgur.com/ej3WAAS.jpeg',
                 'https://i.imgur.com/c6pdccI.jpeg'
               ].map((img, index) => (
                 <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
