@@ -36,11 +36,11 @@ const partyGalleryItems: GalleryItem[] = [
   { src: 'https://i.imgur.com/KPytLRO.jpeg', alt: 'Event Details', category: 'Event' },
   { src: 'https://i.imgur.com/95rGaKS.jpeg', alt: 'DJ Equipment', category: 'Setup' },
   { src: 'https://i.imgur.com/azx2njQ.jpeg', alt: 'Hochzeit Celebration', category: 'Hochzeit' },
-  { src: 'https://i.imgur.com/f67oWfe.jpeg', alt: 'Event Highlights', category: 'Event' },
+  { src: 'https://i.imgur.com/FmdbvIm.jpeg', alt: 'Event Highlights', category: 'Event' },
   { src: 'https://i.imgur.com/cbNwVnC.jpeg', alt: 'Event Moment', category: 'Event' },
   { src: 'https://i.imgur.com/3zDqrc5.jpeg', alt: 'Event Memory', category: 'Event' },
   { src: 'https://i.imgur.com/940CVMq.jpeg', alt: 'DJ Setup', category: 'Setup' },
-  { src: 'https://i.imgur.com/FmdbvIm.jpeg', alt: 'DJ Setup', category: 'Setup' },
+  { src: 'https://i.imgur.com/f67oWfe.jpeg', alt: 'DJ Setup', category: 'Setup' },
   { src: 'https://i.imgur.com/J0kLTgA.jpeg', alt: 'DJ Setup', category: 'Setup' },
 ];
 
