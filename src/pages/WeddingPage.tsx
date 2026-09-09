@@ -566,8 +566,7 @@ const WeddingPage = () => {
                 'https://i.imgur.com/Jp8JCWs.jpeg',
                 'https://i.imgur.com/yUrJjVQ.jpeg',
                 'https://i.imgur.com/XQZNrV1.jpeg',
-                'https://i.imgur.com/c6pdccI.jpeg',
-                'https://i.imgur.com/aPvvYzA.jpeg'
+                'https://i.imgur.com/c6pdccI.jpeg'
               ].map((img, index) => (
                 <div key={index} className="relative group overflow-hidden rounded-xl aspect-square cursor-pointer shadow-lg">
                   <img src={img} alt={`Hochzeit ${index + 1}`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
